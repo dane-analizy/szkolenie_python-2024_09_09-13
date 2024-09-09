@@ -243,12 +243,14 @@
 
 # f = as_float(liczba)
 
+
+
 # ZADANIE
 
 # Napisz program, który pobierze od użytkownika masę i wzrost, a następnie policzy BMI i wypisze na konsolę.
 # Dodatkowo - na podstawie wartości obliczonego BMI niech poda komentarz.
-# < 16 => wygłodzenie
-# 16 - 16.999 => wychudzenie
+# <= 16 => wygłodzenie
+# 16 - 16.999999 => wychudzenie
 # 17 - 18,49 => niedowaga
 # 18,5 - 24,999 => pożądana masa ciała
 # 25 - 29,999 => nadwaga
