@@ -583,6 +583,8 @@
 # rozwiązanie
 
 # czy na pewno dobrze liczy?
+# to liczy w ilu liniach mamy szukane słowo!
+
 # slowo = input("Podaj słowo ")
 # plik = input("Podaj plik ")
 # licznik = 0
