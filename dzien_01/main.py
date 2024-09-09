@@ -580,3 +580,26 @@
 # Napisz program, który zliczy ilość wystąpień małej lub dużej wersji ciągu podanego przez użytkownika
 # w pliku, którego nazwa także podana jest przez użytkownika.
 
+# rozwiązanie
+
+# czy na pewno dobrze liczy?
+# slowo = input("Podaj słowo ")
+# plik = input("Podaj plik ")
+# licznik = 0
+# for linia in open(plik, "r", encoding="utf-8"):
+#     if slowo.lower() in linia.lower():
+#         licznik += 1
+# print(licznik)
+
+
+# # to dobrze liczy :)
+# slowo = input("Podaj słowo ")
+# plik = input("Podaj plik ")
+# tresc_pliku = open(plik, "r", encoding="utf-8").read()
+# print(tresc_pliku.lower().count(slowo.lower()))
+
+
+### ZADANIE
+# Napisz wyszukiwarkę plikową. Wyszukiwarka powinna odebrać od użytkownika poszukiwaną frazę oraz nazwę pliku.
+# W wyniku działania wyszukiwarka powinna pokazać w której linii wystąpiła wyszukiwana fraza, ile razy oraz całą linię.
+# Wyszukiwarka powinna być nieczuła na wielkość liter.
