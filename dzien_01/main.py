@@ -195,3 +195,20 @@
 #     komunikat_wyjsciowy = KOMUNIKAT_ZERO
     
 # print(f"Twoja liczba {liczba} jest {komunikat_wyjsciowy}")
+
+
+# a = 2 
+# b = 2
+
+# if a == 1 and b == 2:
+#     print("a == 1 and b == 2")
+
+# if a != 1 or b != 2:
+#     print("a != 1 or b != 2")
+    
+# if not a == 1:
+#     print("a != 1")
+    
+# d = False
+# if not d:
+#     print("D jest NIE PRAWDZIWE")
