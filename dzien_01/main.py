@@ -153,3 +153,45 @@
 ### ZADANIE
 # Niech użytkownik poda jakąś liczbę.
 # W odpowiedzi wyświetlamy tę liczbę i informację czy liczba jest dodatnia, ujemna czy też jest zerem.
+
+# rozwiązanie 1
+# liczba = float(input("Daj mi liczbę: "))
+
+# if liczba < 0:
+#     print("ujemna")
+# elif liczba > 0:
+#     print("dodatnia")
+# else:
+#     print("zero")
+
+# rozwiązanie 2
+
+# liczba = float(input("Daj mi liczbę: "))
+# a = "ujemna"
+# b = "dodatnia"
+# c = "zerem"
+
+# if liczba < 0:
+#     print(a)
+# elif liczba > 0:
+#     print(b)
+# else:
+#     print(c)
+
+
+# # rozwiązanie 3
+
+# liczba = float(input("Daj mi liczbę: "))
+
+# KOMUNIKAT_UJEMNA = "ujemna"
+# KOMUNIKAT_DODATNIA = "dodatnia"
+# KOMUNIKAT_ZERO = "zerem"
+
+# if liczba < 0:
+#     komunikat_wyjsciowy = KOMUNIKAT_UJEMNA
+# elif liczba > 0:
+#     komunikat_wyjsciowy = KOMUNIKAT_DODATNIA
+# else:
+#     komunikat_wyjsciowy = KOMUNIKAT_ZERO
+    
+# print(f"Twoja liczba {liczba} jest {komunikat_wyjsciowy}")
