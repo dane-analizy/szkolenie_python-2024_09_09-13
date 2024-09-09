@@ -362,7 +362,11 @@
 
 
 # dzielenie
+# print("10 / 4 = ", 10 / 4) # zwykłe dzielenie
+# print("10 % 4 = ", 10 % 4) # reszta z dzielenia
+# print("10 // 4 = ", 10 // 4) # modulo - liczba całkowita z dzielenia
 
-print("10 / 4 = ", 10 / 4) # zwykłe dzielenie
-print("10 % 4 = ", 10 % 4) # reszta z dzielenia
-print("10 // 4 = ", 10 // 4) # modulo - liczba całkowita z dzielenia
+
+## ZADANIE
+
+# Wydrukuj liczby od 1 do 100 razem z informacją czy liczba jest parzysta czy nieparzysta.
