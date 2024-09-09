@@ -531,7 +531,7 @@
 #     if literka in zakazane_znaki:
 #         continue
 #     czysty_text = czysty_text+literka
-    
+
 # print(czysty_text.upper())
 
 
