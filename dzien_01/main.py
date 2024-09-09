@@ -599,7 +599,6 @@
 # print(tresc_pliku.lower().count(slowo.lower()))
 
 
-
 # wyrównywanie tekstu - f-string
 # liczba = 10_000
 # print(f"|{liczba:<10}|{liczba:>10}|{liczba:^10}|")
@@ -618,14 +617,14 @@ nazwa_pliku = input("Podaj nazwe pliku: ")
 szukaj = input("Podaj szukany tekst: ")
 suma_wystapien = 0
 
-for n, linia in enumerate(open("tadzio.txt", "r", encoding="utf-8"), start=1):
-    if len(linia.strip()) == 0 :
+for n, linia in enumerate(open(nazwa_pliku, "r", encoding="utf-8"), start=1):
+    if len(linia.strip()) == 0:
         continue
 
     ile_wystapien = linia.lower().count(szukaj.lower())
     if ile_wystapien > 0:
         print(f"{n:>5} | {ile_wystapien:>2} | {linia.strip()}")
-        suma_wystapien = suma_wystapien + ile_wystapien
-        
-        
+        suma_wystapien += ile_wystapien
+
+
 print(f"Suma wystapien slowa {szukaj}: {suma_wystapien}")
