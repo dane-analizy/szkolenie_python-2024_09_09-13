@@ -138,13 +138,18 @@
 
 
 # warunki - IF
-a = 20
-print("przed ifem")
-if a == 1 :
-    print("A jest równe 1")
-elif a == 2:
-    print("A jest równe 2")
-else:
-    print("A nie jest równe 1 ani nie jest równe 2")
+# a = 20
+# print("przed ifem")
+# if a == 1 :
+#     print("A jest równe 1")
+# elif a == 2:
+#     print("A jest równe 2")
+# else:
+#     print("A nie jest równe 1 ani nie jest równe 2")
 
-print("po ifie")
+# print("po ifie")
+
+
+### ZADANIE
+# Niech użytkownik poda jakąś liczbę.
+# W odpowiedzi wyświetlamy tę liczbę i informację czy liczba jest dodatnia, ujemna czy też jest zerem.
