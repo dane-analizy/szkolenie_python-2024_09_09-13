@@ -438,3 +438,21 @@
 #     print(1 / i)
 # else:
 #     print("wykonał się else")
+
+
+# pętla while - kręci się dopóki warunek jest prawdziwy
+
+# i = 0
+# while i < 1_000:
+#     print(f"{i=}")
+#     i += 1
+
+# 1_000_000
+# 12_34_567
+
+
+#### ZADANIE
+
+# Napisz pętlę while która będzie wyświetlała kolejne potęgi liczby 2 aż wartość potęgi (wynik potęgowania)
+# nie przekroczy wartości podanej przez użytkownika.
+
