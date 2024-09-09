@@ -631,7 +631,7 @@
 
 
 
-## Tabliczka mnożenia
+## Tabliczka mnożenia - pętla w pętli
 
 # nagłówek
 linia_wyników = " X "
