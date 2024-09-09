@@ -105,7 +105,7 @@
 # Napisz program, który pobierze od użytkownika jego imię i wyświetli pozdrowienie. Użyj f-stringów do przygotowania wyniku.
 
 # rozwiązanie
-imie = input("Jak masz na imię?")
-hello = f"Witaj \n\"mój\tdrogi\" {imie}."
-print(hello)
+# imie = input("Jak masz na imię?")
+# hello = f"Witaj \n\"mój\tdrogi\" {imie}."
+# print(hello)
 
