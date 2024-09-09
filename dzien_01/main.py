@@ -545,3 +545,11 @@
 #     text = text.replace(zakazany_znak, "")
 
 # print(text.upper())
+
+
+# # s in s - case sensitive
+# napis = "abcde"
+# if "Ab".lower() in napis.lower():
+#     print("jest w środku")
+# else:
+#     print("nie ma")
