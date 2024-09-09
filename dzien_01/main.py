@@ -212,3 +212,46 @@
 # d = False
 # if not d:
 #     print("D jest NIE PRAWDZIWE")
+
+
+
+# jak sprawdzić czy user podał floata
+
+# zmienna = input("Daj cos ")
+# print(type(zmienna))
+
+# f = None
+
+
+# wyjątki - będzie w czwartek
+# try:
+#     f = float(zmienna)
+# except:
+#     print("błąd")
+
+# print(zmienna, f)
+
+
+# funkcja - będzie w czwartek
+# def as_float(s):
+#     try:
+#         f = float(s)
+#         return f
+#     except:
+#         return None
+
+
+# f = as_float(liczba)
+
+# ZADANIE
+
+# Napisz program, który pobierze od użytkownika masę i wzrost, a następnie policzy BMI i wypisze na konsolę.
+# Dodatkowo - na podstawie wartości obliczonego BMI niech poda komentarz.
+# < 16 => wygłodzenie
+# 16 - 16.999 => wychudzenie
+# 17 - 18,49 => niedowaga
+# 18,5 - 24,999 => pożądana masa ciała
+# 25 - 29,999 => nadwaga
+# 30 - 34,999 => otyłość I stopnia
+# 35 - 39,999 => otyłość II stopnia (duża)
+# > 40 otyłość III stopnia (chorobliwa)
