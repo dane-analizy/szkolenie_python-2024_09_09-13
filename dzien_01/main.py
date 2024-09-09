@@ -356,3 +356,13 @@
 ### ZADANIE
 
 # Wyświetl 20 kolejnych potęg liczby 2.
+
+# for n, i in enumerate(range(20), start=1):
+#     print(n, 2**i)
+
+
+# dzielenie
+
+print("10 / 4 = ", 10 / 4) # zwykłe dzielenie
+print("10 % 4 = ", 10 % 4) # reszta z dzielenia
+print("10 // 4 = ", 10 // 4) # modulo - liczba całkowita z dzielenia
