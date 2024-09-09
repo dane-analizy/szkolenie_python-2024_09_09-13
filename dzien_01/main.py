@@ -122,3 +122,16 @@
 # a*a
 # a**2
 # pow(a, 2)
+
+masa = input("Podaj swoją wagę w kg: ")
+wzrost = input("Podaj swój wzrost w cm ")
+
+masa = float(masa)
+wzrost = float(wzrost)/100
+
+bmi = masa / wzrost**2
+
+# zaokrąglenie
+# bmi = round(bmi, 2)
+
+print(f"Przy wzroście {wzrost*100} cm i masie {masa=} kg Twoje BMI = {bmi:.2f}")
