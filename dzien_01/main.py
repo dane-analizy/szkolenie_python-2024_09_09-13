@@ -456,3 +456,23 @@
 # Napisz pętlę while która będzie wyświetlała kolejne potęgi liczby 2 aż wartość potęgi (wynik potęgowania)
 # nie przekroczy wartości podanej przez użytkownika.
 
+# limit = int(input("Podaj maksa: "))
+
+# potega = 0
+# wynik = 2**potega
+# while wynik < limit:
+#     print(f"początek: 2 ^ {potega} = {wynik}")
+#     potega += 1
+#     wynik = 2**potega
+#     # print(f"koniec  : 2 ^ {potega} = {wynik}")
+
+
+# while warunek {
+#     ...
+# }
+
+
+# do {
+    
+    
+# } while warunek
