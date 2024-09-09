@@ -294,32 +294,65 @@
 
 # rozwiązanie 2
 
-masa = input("Ile ważysz (w kg)? ")
-wzrost = input("podaj wzrost (w cm) ")
+# masa = input("Ile ważysz (w kg)? ")
+# wzrost = input("podaj wzrost (w cm) ")
 
-masa = float(masa)
-wzrost = float(wzrost) / 100
+# masa = float(masa)
+# wzrost = float(wzrost) / 100
 
-bmi = masa / (wzrost**2)
-# print(f"Twoje BMI to {bmi}.")
+# bmi = masa / (wzrost**2)
+# # print(f"Twoje BMI to {bmi}.")
 
-if bmi < 16:
-    bmi_opis = "wyglodzenie"
-elif bmi < 17:
-    bmi_opis = "wychudzenie"
-elif bmi < 18.5:
-    bmi_opis = "niedowaga"
-elif bmi < 25:
-    bmi_opis = "pożądana masa ciała"
-elif bmi < 30:
-    bmi_opis = "nadwaga"
-elif bmi < 35:
-    bmi_opis = "otyłość I stopnia"
-elif bmi < 40:
-    bmi_opis = "otyłość II stopnia"
-else:
-    bmi_opis = "otyłość III stopnia"
+# if bmi < 16:
+#     bmi_opis = "wyglodzenie"
+# elif bmi < 17:
+#     bmi_opis = "wychudzenie"
+# elif bmi < 18.5:
+#     bmi_opis = "niedowaga"
+# elif bmi < 25:
+#     bmi_opis = "pożądana masa ciała"
+# elif bmi < 30:
+#     bmi_opis = "nadwaga"
+# elif bmi < 35:
+#     bmi_opis = "otyłość I stopnia"
+# elif bmi < 40:
+#     bmi_opis = "otyłość II stopnia"
+# else:
+#     bmi_opis = "otyłość III stopnia"
 
-print(
-    f"Przy wzroscie {wzrost*100} cm i masie ciala {masa} kg twoje BMI to {bmi:.2f}. Jest to {bmi_opis}."
-)
+# print(
+#     f"Przy wzroscie {wzrost*100} cm i masie ciala {masa} kg twoje BMI to {bmi:.2f}. Jest to {bmi_opis}."
+# )
+
+
+# if 17 <= bmi < 18.5:
+#     ...
+
+
+# Pętle
+
+# for i in iterable:
+#     ...
+
+# # range(10) - poda nam 10 kolejnych liczb 0..9
+# for i in range(10):
+#     print(i)
+
+# print("*|"*40)
+
+# # range(1, 10) - poda nam kolejne liczby 1..9
+# for i in range(1, 10):
+#     print(i)
+
+# print("*|" * 40)
+
+# # range(3, 10, 2) - poda nam kolejne liczby 3..9 co 4
+# for i in range(3, 10, 4):
+#     print(i)
+    
+# print("*|" * 40)
+
+
+### ZADANIE
+
+# Wyświetl 20 kolejnych potęg liczby 2.
