@@ -113,8 +113,9 @@
 
 
 ### ZADANIE 
-#  Napisz program, który pobierze od użytkownika masę i wzrost, a następnie policzy BMI i wypisze wynik na konsolę.
+# Napisz program, który pobierze od użytkownika masę i wzrost, a następnie policzy BMI i wypisze wynik na konsolę.
 
+# https://pl.wikipedia.org/wiki/Wska%C5%BAnik_masy_cia%C5%82a
 # BMI = masa [kg] / wzrost^2 [m]
 
 # potegowanie - do kwadratu:
