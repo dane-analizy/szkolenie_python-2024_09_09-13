@@ -467,12 +467,31 @@
 #     # print(f"koniec  : 2 ^ {potega} = {wynik}")
 
 
+# w np. Javie mamy
 # while warunek {
 #     ...
 # }
-
-
+# albo:
 # do {
-    
-    
+# ...
 # } while warunek
+
+
+### teksty
+
+# s = "   napis Ala ma Kota   \n "
+
+# print("|"+s.upper()+"|")
+# print("|"+s.lower()+"|")
+# print("|"+s.title()+"|")
+# print("|"+s.strip()+"|")
+# print("|"+s.lstrip()+"|")
+# print("|"+s.rstrip()+"|")
+# print("|"+s.replace(" ", "+")+"|")
+
+
+### ZADANIE
+
+# Napisz program, który przyjmie od użytkownika ciąg tekstowy, następnie usunie z niego znaki: ,.?!
+# a następnie powiększony do dużych liter wyświetli w konsoli.
+
