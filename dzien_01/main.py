@@ -98,8 +98,8 @@
 # print(c)
 
 # pobieranie wartości od użytkownika
-napis = input("tekst zachęty")
-print(napis)
+# napis = input("tekst zachęty")
+# print(napis)
 
 ## ZADANIE
-# Napisz program, który pobierze od użytkownika jego imię i wyświetli pozdrowienie.
+# Napisz program, który pobierze od użytkownika jego imię i wyświetli pozdrowienie. Użyj f-stringów do przygotowania wyniku.
