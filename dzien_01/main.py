@@ -106,6 +106,6 @@
 
 # rozwiązanie
 imie = input("Jak masz na imię?")
-hello = f'Witaj "mój drogi" {imie}.'
+hello = f"Witaj \n\"mój\tdrogi\" {imie}."
 print(hello)
 
