@@ -370,3 +370,28 @@
 ## ZADANIE
 
 # Wydrukuj liczby od 1 do 100 razem z informacją czy liczba jest parzysta czy nieparzysta.
+
+# for i in range(1, 101):
+#     if i % 2 == 0:
+#         print(f"{i=} parzysta")
+#     else:
+#         print(f"{i=} nieparzysta")
+  
+# nieco odwrotnie:      
+
+# for i in range(1, 101):
+#     if i % 2:
+#         print(f"{i=} nieparzysta")
+#     else:
+#         print(f"{i=} parzysta")
+
+
+### ZADANIE
+
+# Napisz symulator lokaty.
+# Symulator ma przyjmować zmienne:
+# - kwotę lokaty
+# - oprocentowanie w skali roku
+# - ilość miesięcy na jaką zakładamy lokatę
+# Symulator ma dla każdego miesiąca lokaty wypisać który to miesiąc oraz ile mamy aktualnie zgromadzone po doliczeniu odsetek. 
+# Zakładamy kapitalizację odsetek co miesiąc
