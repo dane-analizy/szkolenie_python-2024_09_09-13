@@ -109,3 +109,15 @@
 # hello = f"Witaj \n\"mój\tdrogi\" {imie}."
 # print(hello)
 
+
+
+
+### ZADANIE 
+#  Napisz program, który pobierze od użytkownika masę i wzrost, a następnie policzy BMI i wypisze wynik na konsolę.
+
+# BMI = masa [kg] / wzrost^2 [m]
+
+# potegowanie - do kwadratu:
+# a*a
+# a**2
+# pow(a, 2)
