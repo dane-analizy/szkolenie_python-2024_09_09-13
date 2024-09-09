@@ -613,18 +613,36 @@
 
 # łącznie X wystąpień
 
-nazwa_pliku = input("Podaj nazwe pliku: ")
-szukaj = input("Podaj szukany tekst: ")
-suma_wystapien = 0
+# nazwa_pliku = input("Podaj nazwe pliku: ")
+# szukaj = input("Podaj szukany tekst: ")
+# suma_wystapien = 0
 
-for n, linia in enumerate(open(nazwa_pliku, "r", encoding="utf-8"), start=1):
-    if len(linia.strip()) == 0:
-        continue
+# for n, linia in enumerate(open(nazwa_pliku, "r", encoding="utf-8"), start=1):
+#     if len(linia.strip()) == 0:
+#         continue
 
-    ile_wystapien = linia.lower().count(szukaj.lower())
-    if ile_wystapien > 0:
-        print(f"{n:>5} | {ile_wystapien:>2} | {linia.strip()}")
-        suma_wystapien += ile_wystapien
+#     ile_wystapien = linia.lower().count(szukaj.lower())
+#     if ile_wystapien > 0:
+#         print(f"{n:>5} | {ile_wystapien:>2} | {linia.strip()}")
+#         suma_wystapien += ile_wystapien
 
 
-print(f"Suma wystapien slowa {szukaj}: {suma_wystapien}")
+# print(f"Suma wystapien slowa {szukaj}: {suma_wystapien}")
+
+
+
+## Tabliczka mnożenia
+
+# nagłówek
+linia_wyników = " X "
+for y in range(1, 11):
+    linia_wyników = linia_wyników + " | " + f"{y:^3}" + " | "
+print(linia_wyników)
+
+# środek tabelki
+for x in range(1, 11):
+    linia_wyników = f"{x:^3}"
+    for y in range(1, 11):
+        wynik =f"{x*y:>3}"
+        linia_wyników = linia_wyników + " | " + wynik + " | "
+    print(linia_wyników)
