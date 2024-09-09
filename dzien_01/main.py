@@ -555,7 +555,6 @@
 #     print("nie ma")
 
 
-
 # wczytywanie plików tekstowych
 
 # cały na raz
@@ -572,7 +571,6 @@
 # ile razy ciąg wystepuje w innym - case sensitive
 # text = " Ala ma kota ale kot nie ma Ali, za to Ala nie ma psa"
 # print(text.count("ala"))
-
 
 
 ### ZADANIE
@@ -601,7 +599,33 @@
 # print(tresc_pliku.lower().count(slowo.lower()))
 
 
+
+# wyrównywanie tekstu - f-string
+# liczba = 10_000
+# print(f"|{liczba:<10}|{liczba:>10}|{liczba:^10}|")
+
+
 ### ZADANIE
 # Napisz wyszukiwarkę plikową. Wyszukiwarka powinna odebrać od użytkownika poszukiwaną frazę oraz nazwę pliku.
 # W wyniku działania wyszukiwarka powinna pokazać w której linii wystąpiła wyszukiwana fraza, ile razy oraz całą linię.
 # Wyszukiwarka powinna być nieczuła na wielkość liter.
+
+# numer linii   liczba wystapień w linii   linia
+
+# łącznie X wystąpień
+
+nazwa_pliku = input("Podaj nazwe pliku: ")
+szukaj = input("Podaj szukany tekst: ")
+suma_wystapien = 0
+
+for n, linia in enumerate(open("tadzio.txt", "r", encoding="utf-8"), start=1):
+    if len(linia.strip()) == 0 :
+        continue
+
+    ile_wystapien = linia.lower().count(szukaj.lower())
+    if ile_wystapien > 0:
+        print(f"{n:>5} | {ile_wystapien:>2} | {linia.strip()}")
+        suma_wystapien = suma_wystapien + ile_wystapien
+        
+        
+print(f"Suma wystapien slowa {szukaj}: {suma_wystapien}")
