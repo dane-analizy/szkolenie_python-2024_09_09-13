@@ -110,9 +110,7 @@
 # print(hello)
 
 
-
-
-### ZADANIE 
+### ZADANIE
 # Napisz program, który pobierze od użytkownika masę i wzrost, a następnie policzy BMI i wypisze wynik na konsolę.
 
 # https://pl.wikipedia.org/wiki/Wska%C5%BAnik_masy_cia%C5%82a
@@ -193,11 +191,11 @@
 #     komunikat_wyjsciowy = KOMUNIKAT_DODATNIA
 # else:
 #     komunikat_wyjsciowy = KOMUNIKAT_ZERO
-    
+
 # print(f"Twoja liczba {liczba} jest {komunikat_wyjsciowy}")
 
 
-# a = 2 
+# a = 2
 # b = 2
 
 # if a == 1 and b == 2:
@@ -205,14 +203,13 @@
 
 # if a != 1 or b != 2:
 #     print("a != 1 or b != 2")
-    
+
 # if not a == 1:
 #     print("a != 1")
-    
+
 # d = False
 # if not d:
 #     print("D jest NIE PRAWDZIWE")
-
 
 
 # jak sprawdzić czy user podał floata
@@ -242,7 +239,6 @@
 
 
 # f = as_float(liczba)
-
 
 
 # ZADANIE
@@ -349,7 +345,7 @@
 # # range(3, 10, 2) - poda nam kolejne liczby 3..9 co 4
 # for i in range(3, 10, 4):
 #     print(i)
-    
+
 # print("*|" * 40)
 
 
@@ -376,8 +372,8 @@
 #         print(f"{i=} parzysta")
 #     else:
 #         print(f"{i=} nieparzysta")
-  
-# nieco odwrotnie:      
+
+# nieco odwrotnie:
 
 # for i in range(1, 101):
 #     if i % 2:
@@ -393,17 +389,52 @@
 # - kwotę lokaty
 # - oprocentowanie w skali roku
 # - ilość miesięcy na jaką zakładamy lokatę
-# Symulator ma dla każdego miesiąca lokaty wypisać który to miesiąc oraz ile mamy aktualnie zgromadzone po doliczeniu odsetek. 
+# Symulator ma dla każdego miesiąca lokaty wypisać który to miesiąc oraz ile mamy aktualnie zgromadzone po doliczeniu odsetek.
 # Zakładamy kapitalizację odsetek co miesiąc.
 
 
 # rozwiązanie
 
-money_amount = float(input("Podaj kwotę lokaty:\n"))
-percent = float(input("Podaj oprocentowanie w skali roku (bez znaku %):\n"))
-duration = int(input("Podaj czas trwania lokaty w miesiącach:\n"))
+# money_amount = float(input("Podaj kwotę lokaty:\n"))
+# percent = float(input("Podaj oprocentowanie w skali roku (bez znaku %):\n"))
+# duration = int(input("Podaj czas trwania lokaty w miesiącach:\n"))
 
-for month_number, _ in enumerate(range(1, duration + 1), start=1):
-    money_amount += money_amount * ((percent) / 100 / 12)
-    # money_amount = money_amount + money_amount * ((percent) / 100 / 12)
-    print(f"Miesiąc {month_number}, Stan konta {money_amount:.02f}.")
+# for month_number, _ in enumerate(range(1, duration + 1), start=1):
+#     money_amount += money_amount * ((percent) / 100 / 12)
+#     # money_amount = money_amount + money_amount * ((percent) / 100 / 12)
+#     print(f"Miesiąc {month_number}, Stan konta {money_amount:.02f}.")
+
+
+# for i in range(-10, 10):
+#     if i != 0:
+#         print(1/i)
+
+
+# continue - przejście do następnej iteracji
+
+# for i in range(-10, 10):
+#     if i == 0:
+#         print("pomijam")
+#         continue
+
+#     print(1/i)
+
+
+# break - zakończenie pętli
+
+# for i in range(-10, 10):
+#     if i == 0:
+#         print("kończę pętlę")
+#         break
+
+#     print(1 / i)
+
+
+# czy pętla przeszła wszystkie iteracje?
+# for i in range(-10, 10):
+#     if i == 0:
+#         print("kończę pętlę")
+#         continue # zamień na break
+#     print(1 / i)
+# else:
+#     print("wykonał się else")
