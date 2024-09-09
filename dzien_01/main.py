@@ -257,3 +257,69 @@
 # 30 - 34,999 => otyłość I stopnia
 # 35 - 39,999 => otyłość II stopnia (duża)
 # > 40 otyłość III stopnia (chorobliwa)
+
+
+# rozwiązanie 1
+
+# masa = input("Ile ważysz (w kg)? ")
+# wzrost = input("podaj wzrost (w cm) ")
+
+# masa = float(masa)
+# wzrost = float(wzrost) / 100
+
+# bmi = masa / (wzrost**2)
+# # print(f"Twoje BMI to {bmi}.")
+
+# if bmi < 16:
+#     bmi_opis = "wyglodzenie"
+# elif bmi >= 16 and bmi < 17:
+#     bmi_opis = "wychudzenie"
+# elif bmi >= 17 and bmi < 18.5:
+#     bmi_opis = "niedowaga"
+# elif bmi >= 18.5 and bmi < 25:
+#     bmi_opis = "pożądana masa ciała"
+# elif bmi >= 25 and bmi < 30:
+#     bmi_opis = "nadwaga"
+# elif bmi >= 30 and bmi < 35:
+#     bmi_opis = "otyłość I stopnia"
+# elif bmi >= 35 and bmi < 40:
+#     bmi_opis = "otyłość II stopnia"
+# else:
+#     bmi_opis = "otyłość III stopnia"
+
+# print(
+#     f"Przy wzroscie {wzrost*100} cm i masie ciala {masa} kg twoje BMI to {bmi:.2f}. Jest to {bmi_opis}."
+# )
+
+
+# rozwiązanie 2
+
+masa = input("Ile ważysz (w kg)? ")
+wzrost = input("podaj wzrost (w cm) ")
+
+masa = float(masa)
+wzrost = float(wzrost) / 100
+
+bmi = masa / (wzrost**2)
+# print(f"Twoje BMI to {bmi}.")
+
+if bmi < 16:
+    bmi_opis = "wyglodzenie"
+elif bmi < 17:
+    bmi_opis = "wychudzenie"
+elif bmi < 18.5:
+    bmi_opis = "niedowaga"
+elif bmi < 25:
+    bmi_opis = "pożądana masa ciała"
+elif bmi < 30:
+    bmi_opis = "nadwaga"
+elif bmi < 35:
+    bmi_opis = "otyłość I stopnia"
+elif bmi < 40:
+    bmi_opis = "otyłość II stopnia"
+else:
+    bmi_opis = "otyłość III stopnia"
+
+print(
+    f"Przy wzroscie {wzrost*100} cm i masie ciala {masa} kg twoje BMI to {bmi:.2f}. Jest to {bmi_opis}."
+)
