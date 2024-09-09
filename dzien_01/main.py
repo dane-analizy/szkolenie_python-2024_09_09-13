@@ -564,6 +564,19 @@
 
 # linia po linii
 # cały na raz
-for linia in open("tadzio.txt", "r", encoding="utf-8"):
-    print(linia)
-    print(".......")
+# for linia in open("tadzio.txt", "r", encoding="utf-8"):
+#     print(linia)
+#     print(".......")
+
+
+# ile razy ciąg wystepuje w innym - case sensitive
+# text = " Ala ma kota ale kot nie ma Ali, za to Ala nie ma psa"
+# print(text.count("ala"))
+
+
+
+### ZADANIE
+
+# Napisz program, który zliczy ilość wystąpień małej lub dużej wersji ciągu podanego przez użytkownika
+# w pliku, którego nazwa także podana jest przez użytkownika.
+
