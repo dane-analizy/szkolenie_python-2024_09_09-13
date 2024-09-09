@@ -553,3 +553,17 @@
 #     print("jest w środku")
 # else:
 #     print("nie ma")
+
+
+
+# wczytywanie plików tekstowych
+
+# cały na raz
+# plik = open("tadzio.txt", "r", encoding="utf-8").read()
+# print(plik)
+
+# linia po linii
+# cały na raz
+for linia in open("tadzio.txt", "r", encoding="utf-8"):
+    print(linia)
+    print(".......")
