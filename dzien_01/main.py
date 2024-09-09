@@ -495,3 +495,53 @@
 # Napisz program, który przyjmie od użytkownika ciąg tekstowy, następnie usunie z niego znaki: ,.?!
 # a następnie powiększony do dużych liter wyświetli w konsoli.
 
+# rozwiązanie 1a
+
+# text = input("Podaj losowy tekst: ")
+# text = text.replace(".", "")
+# text = text.replace(",", "")
+# text = text.replace("!", "")
+# text = text.replace("?", "")
+# text = text.upper()
+# print(text)
+
+# rozwiązanie 1b
+
+# text = input("Podaj losowy tekst: ")
+# text = text.replace(".", "").replace(",", "").replace("!", "").replace("?", "")
+# text = text.upper()
+# print(text)
+
+
+# rozwiązanie 2
+
+# czy jeden napis jest w drugim?
+# napis = "abcde"
+# if "ab" in napis:
+#     print("jest w środku")
+
+
+# text = input("Podaj losowy tekst: ")
+
+# zakazane_znaki = ".,?!"
+
+# czysty_text = ""
+
+# for literka in text:
+#     if literka in zakazane_znaki:
+#         continue
+#     czysty_text = czysty_text+literka
+    
+# print(czysty_text.upper())
+
+
+# rozwiązanie 3
+
+# text = input("Podaj losowy tekst: ")
+
+# zakazane_znaki = ".,?!"
+
+# for zakazany_znak in zakazane_znaki:
+#     text = text.replace(zakazany_znak, "")
+
+# print(text.upper())
