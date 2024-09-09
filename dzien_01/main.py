@@ -395,3 +395,15 @@
 # - ilość miesięcy na jaką zakładamy lokatę
 # Symulator ma dla każdego miesiąca lokaty wypisać który to miesiąc oraz ile mamy aktualnie zgromadzone po doliczeniu odsetek. 
 # Zakładamy kapitalizację odsetek co miesiąc.
+
+
+# rozwiązanie
+
+money_amount = float(input("Podaj kwotę lokaty:\n"))
+percent = float(input("Podaj oprocentowanie w skali roku (bez znaku %):\n"))
+duration = int(input("Podaj czas trwania lokaty w miesiącach:\n"))
+
+for month_number, _ in enumerate(range(1, duration + 1), start=1):
+    money_amount += money_amount * ((percent) / 100 / 12)
+    # money_amount = money_amount + money_amount * ((percent) / 100 / 12)
+    print(f"Miesiąc {month_number}, Stan konta {money_amount:.02f}.")
