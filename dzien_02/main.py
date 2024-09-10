@@ -305,8 +305,6 @@
 # print([el for _ in range(20) if (el := random.randint(1, 100)) % 2 == 0])
 
 
-
-
 # rozwiązanie 2
 # import random
 
@@ -339,3 +337,41 @@
 
 # napis = ["napis", "abc"]
 # print(napis[::-1])
+
+# tabliczka = []
+# for x in range(1, 11):
+#     wiersz = []
+#     for y in range(1, 11):
+#         w = x * y
+#         wiersz.append(w)
+#     tabliczka.append(wiersz)
+
+# print(tabliczka)
+
+
+# tabliczka = [[f"{x} * {y} = {x*y}" for y in range(1, 11)] for x in range(1, 11)]
+
+# for row in tabliczka:
+#     print(row)
+
+
+# rozdzielanie napisu na listę stringów - metoda .split(...)
+# napis = "ala ma kota.ale nie ma psa"
+# slowa = napis.split()
+# print(slowa)
+
+
+# łączenie listy stringów
+
+# to nie działa
+# napis_na_nowo = [slowo+slowo for slowo in slowa]
+# print(napis_na_nowo)
+
+
+# napis_na_nowo = ""
+# for slowo in slowa:
+#     napis_na_nowo = napis_na_nowo + " " + slowo
+# print(napis_na_nowo)
+
+# napis_na_nowo = " ".join(slowa)
+# print(napis_na_nowo)
