@@ -441,3 +441,37 @@ for linia in lista_plik:
 
 # po którym polu sortować, w jakiej kolejności
 # print(sorted(lista_plik, key=lambda el: el[3], reverse=True))
+
+
+# Tuple = krotka
+
+# l = [ 1, 2, 3, "a", "b" ,"c"]
+# k = tuple(l)
+# print("Lista:", l)
+# print("Krotka:", k)
+
+# k2 = ("napis", "ala", "ma", "kota")
+# print("Krotka 2:", k2)
+# # print(type(k2))
+
+# # for e in k:
+# #     print(e)
+
+# print(list(k2))
+
+
+# # krotka-comprehention
+# k = ( i**2 for i in range(10) )
+# print(k)
+
+# for el in ( i**2 for i in range(10) ):
+#     print(el)
+    
+# k2 = tuple([i**2 for i in range(10)])
+# print(k2)
+
+
+### ZADANIE
+
+# W jednej linijce zbuduj krotkę zawierającą kolejne potęgi liczby 3. A następnie zamień
+# te liczby na stringi (w ramach krotki) i posortuj je (tę krotkę) malejąco.
