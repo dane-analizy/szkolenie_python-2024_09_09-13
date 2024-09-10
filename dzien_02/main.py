@@ -486,7 +486,6 @@ for linia in lista_plik:
 # print(k[::-1])
 
 
-import os
 
 # [
 #     ("../katalog", ["katalog_1", "katalog_2"], []),
@@ -494,10 +493,12 @@ import os
 #     ("../katalog\\katalog_2", [], ["plik2_1"]),
 # ]
 
+import os
+
 for dir_name, dir_list, file_list in os.walk("../katalog"):
     print(f"W katalogu {dir_name} mamy:")
     print("Katalogi:")
-    for dir in  dir_list:
+    for dir in dir_list:
         print(f"\t{dir}")
     print("Pliki:")
     for file in file_list:
@@ -509,3 +510,4 @@ for dir_name, dir_list, file_list in os.walk("../katalog"):
 # Znajdź wszystkie pliki, które w nazwie mają ciąg podany przez użytkownika.
 # Wyświetl pełne ścieżki do nich.
 # Wielkość liter w nazwie plików nie ma znaczenia.
+
