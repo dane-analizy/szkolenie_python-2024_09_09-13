@@ -239,3 +239,52 @@
 
 # Korzystając z list składanych wygeneruj listę 10 kolejnych potęg dwójki.
 # Wyświetl tę listę. Spróbuj zrobić to w jak najkrótszym zapisie.
+
+# rozwiązanie bardzo długie
+# l = []
+# for p in range(10):
+#     w = 2**p
+#     l.append(w)
+    
+# print(l)
+
+
+# krok 2 upraszczania
+# l = []
+# for p in range(10):
+#     l.append(2**p)
+
+# print(l)
+
+
+# krok 3:
+# l = [2**p for p in range(10)]
+
+# print(l)
+
+# krok 4
+# print([2**p for p in range(10)])
+
+
+
+# lista składana z filtrowaniem
+# oryginał
+# l = []
+# for p in range(10):
+#     if p % 2 == 0:
+#         w = 2**p
+#         l.append(w)
+
+# print(l)
+
+# rozwiązanie
+# l = [2**p for p in range(10) if p % 2 == 0]
+# print(l)
+
+
+### ZADANIE
+
+# Stwórz dwie listy. Każda z list ma zawierać losowe liczby z zakresu 1-100.
+# Pierwsza ma zawierać tylko parzyste, druga - tylko nie parzyste.
+# Użyj list składanych do przygotowania tych list.
+# Wyświetl obie listy na ekranie.
