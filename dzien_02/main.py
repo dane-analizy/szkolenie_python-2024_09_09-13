@@ -145,3 +145,64 @@
 
 # print(lista[10])
 # print(lista)
+
+
+# mutowalność - uwaga nie zawsze kopia jest kopią, a wskazuje na to samo
+# l1 = [1, 2, 3, 4]
+# l2 = l1
+# l3 = l1.copy()
+# print(l1)
+# print(l2)
+# print(l3)
+
+
+# kopiowania list
+
+# from copy import deepcopy
+
+# nowa_lista = deepcopy(lista)
+
+
+# l2[2] = "nowa wartość"
+# print(l1)
+# print(l2)
+# print(l3)
+
+# def zrob_cos_z_lista(lista):
+#     lista = lista[::-1]
+#     # return lista
+
+# l1 = [1, 2, 3, 4]
+# l2 = zrob_cos_z_lista(l1)
+# print(l1)
+# print(l2)
+
+
+# łączenie list
+# l1 = [1, 2, 3, 4]
+# l2 = [5, 6, 7, 8, 9]
+
+# Python v3.7+
+# l3 = l1 + l2
+
+# Python wcześniejsze 
+# rozszerzenie - uwaga zmienia l1
+# l1.extend(l2)
+# print(l1)
+# print(l1)
+
+# l3 = [ *l1, *l2  ]
+# print(l3)
+
+
+
+# losowa liczba
+# import random
+# print(random.randint(1, 100))
+
+
+### ZADANIE
+
+# Stwórz dwie listy. Każda z list ma zawierać 10 liczb losowych z zakresu 1-100.
+# Połącz te dwie listy do jednej i wyświetl na konsoli.
+
