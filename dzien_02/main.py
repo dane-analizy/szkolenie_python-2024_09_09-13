@@ -390,8 +390,17 @@
     
 #     linia_czysta = linia_czysta.split(";")
 #     linia_czysta[0] = linia_czysta[0].upper()
-#     linia_czysta[1] = linia_czysta[1].upper()
 #     lista_osob.append(linia_czysta)
     
 # for osoba in lista_osob:
 #     print(osoba[0], osoba[1])
+
+
+
+### ZADANIE
+
+# Napisz program który z pliku dane.csv pobierze dane (wykorzystaj poprzednie zadanie)
+# i dla każdej z osób policzy BMI. Wyświetl wszystkie dane (wraz z BMI) na ekranie.
+
+# BMI = masa [kg] / wzrost^2 [m]
+
