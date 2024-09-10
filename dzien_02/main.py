@@ -375,3 +375,16 @@
 
 # napis_na_nowo = " ".join(slowa)
 # print(napis_na_nowo)
+
+
+
+### ZADANIE
+
+# Napisz program który z pliku dane.csv wyświetli powiększone imię i nazwisko.
+
+for linia in open(...).read():
+    lista_linia = .... split()
+    lista_linia[...].upper()
+    print()
+    
+    
