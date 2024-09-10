@@ -123,3 +123,11 @@
 
 # Napisz program, który pobierze od użytkownika 10 liczb,
 # zapamięta je (zapisze na liście), a na koniec wyświetli całą listę pobranych wartości od końca.
+
+lista = []
+
+for i in range(10):
+    w = input("Podaj coś: ")
+    lista.append(w)
+
+print(lista[::-1])
