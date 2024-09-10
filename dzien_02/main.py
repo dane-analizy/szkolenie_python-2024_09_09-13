@@ -285,3 +285,14 @@
 # Pierwsza ma zawierać tylko parzyste, druga - tylko nie parzyste.
 # Użyj list składanych do przygotowania tych list.
 # Wyświetl obie listy na ekranie.
+
+
+# import random
+
+# lista_losowych = [random.randint(1, 100) for _ in range(20)]
+# lista_parzystych = [el for el in lista_losowych if el % 2 == 0]
+# print(lista_parzystych)
+
+# lista_losowych = [random.randint(1, 100) for _ in range(20)]
+# lista_nieparzystych = [el for el in lista_losowych if el % 2 != 0]
+# print(lista_nieparzystych)
