@@ -299,6 +299,14 @@
 # print(lista_nieparzystych)
 
 
+# operator walarus :=
+# import random
+
+# print([el for _ in range(20) if (el := random.randint(1, 100)) % 2 == 0])
+
+
+
+
 # rozwiązanie 2
 # import random
 
@@ -317,13 +325,17 @@
 
 # listy list
 
-l = [
-    [1, 2, 3],
-    ["a", "b", "c"],
-    [10, "ala", 130]
-]
+# l = [
+#     [1, 2, 3],
+#     ["a", "b", "c"],
+#     [10, "ala", 130],
+#     [ [10, "20"], [50, 60]],
+# ]
 
-print(l)
+# print(l)
+# print(l[2][1])
+# print(l[3][0][1][0])
 
 
-print(l[2][1])
+# napis = ["napis", "abc"]
+# print(napis[::-1])
