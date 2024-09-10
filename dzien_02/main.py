@@ -68,3 +68,52 @@
 
 # Napisz kod który umieści w liście 10 kolejnych potęg liczby 2.
 # Następnie przeiteruj po tej liście i każdy z jej elementów wyświetl na konsoli w osobnej linii.
+
+
+# lista = []
+
+# for p in range(10):
+#     lista.append(2**p)
+
+# # print(lista)
+
+# for el in lista:
+#     print(el)
+
+
+# # generator - zna przepis na kolejną wartość
+# print(range(1, 2000, 3))
+
+# # generator zrzutowany do listy - od razu mamy wszystkie wartości
+# print(list(range(1, 2000, 3)))
+
+
+# zakresy w liście
+
+lista = list(range(20))
+print(lista)
+
+# elementy o indeksach od 0 do 3 włącznie
+print(lista[0:3])
+
+# elementy o indeksach od 10 do 16 włącznie
+print(lista[10:16])
+
+# pierwsze 5 elementów
+print(lista[:5])
+
+# ostatni elemnt
+print(lista[-1])
+
+# ostatnie 5 elementów
+# tak "javowo"
+print(lista[len(lista)-5 : len(lista)])
+# pythonic-style
+print(lista[-5:])
+
+# co 3 element
+# [od : do : krok]
+print(lista[::3])
+
+# od końca
+print(lista[::-1])
