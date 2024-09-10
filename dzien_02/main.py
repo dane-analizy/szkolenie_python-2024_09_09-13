@@ -493,17 +493,17 @@ for linia in lista_plik:
 #     ("../katalog\\katalog_2", [], ["plik2_1"]),
 # ]
 
-import os
+# import os
 
-for dir_name, dir_list, file_list in os.walk("../katalog"):
-    print(f"W katalogu {dir_name} mamy:")
-    print("Katalogi:")
-    for dir in dir_list:
-        print(f"\t{dir}")
-    print("Pliki:")
-    for file in file_list:
-        print(f"\t{file}")
-    print("---------")
+# for dir_name, dir_list, file_list in os.walk("../katalog"):
+#     print(f"W katalogu {dir_name} mamy:")
+#     print("Katalogi:")
+#     for dir in dir_list:
+#         print(f"\t{dir}")
+#     print("Pliki:")
+#     for file in file_list:
+#         print(f"\t{file}")
+#     print("---------")
     
     
 #### ZADANIE
@@ -511,3 +511,49 @@ for dir_name, dir_list, file_list in os.walk("../katalog"):
 # Wyświetl pełne ścieżki do nich.
 # Wielkość liter w nazwie plików nie ma znaczenia.
 
+
+# rozwiązanie zadania z użyciem os
+# import os
+
+# name = input("Podaj fragment nazwy pliku: ")
+
+# for dir_name, dir_list, file_list in os.walk(".."):
+#     for file in file_list:
+#         if name.lower() in file.lower():
+#             print(f"Znalazłem plik {file} w katalogu {dir_name}")
+#             print(f"Pełna ścieżka: {os.path.join(dir_name, file)}")
+
+
+# biblioteka Path - Python v3.4+
+# from pathlib import Path
+
+# p = Path("../katalog")
+
+# print(p)
+
+# plik = p / "katalog_2" / "plik2_1"
+# print(plik)
+
+# print(plik.is_file())
+# print(plik.exists())
+
+
+
+# rozwiązanie zadania z użyciem Pathlib
+# from pathlib import Path
+
+# p = Path("../katalog")
+
+# name = input("Podaj fragment nazwy pliku: ")
+
+# for element in p.rglob("*"):
+#     if element.is_dir():
+#         continue
+    
+#     if name.lower() in element.name.lower():
+#         print(f"Znalazłem plik {element.name} w katalogu {element}")
+
+
+    
+    
+    
