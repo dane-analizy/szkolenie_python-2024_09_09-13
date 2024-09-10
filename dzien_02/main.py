@@ -475,3 +475,4 @@ for linia in lista_plik:
 
 # W jednej linijce zbuduj krotkę zawierającą kolejne potęgi liczby 3. A następnie zamień
 # te liczby na stringi (w ramach krotki) i posortuj je (tę krotkę) malejąco.
+
