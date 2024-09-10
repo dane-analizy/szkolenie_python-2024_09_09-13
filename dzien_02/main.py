@@ -553,7 +553,3 @@ for linia in lista_plik:
 #     if name.lower() in element.name.lower():
 #         print(f"Znalazłem plik {element.name} w katalogu {element}")
 
-
-    
-    
-    
