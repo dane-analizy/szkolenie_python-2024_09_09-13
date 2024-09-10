@@ -21,47 +21,47 @@
 
 # for n, element in enumerate(lista_a):
 #     print(f"Element o indeksie {n} : {element}")
-    
-    
+
+
 # # sposób bardzo łopatologiczny iteracji po liście - częsty "bład" początkującego:
 # for i in range(len(lista_a)):
 #     print(lista_a[i])
-    
+
 # # pythonic-style:
 # for el in lista_a:
 #     print(el)
 
 
 # dodawanie elementów do listy
-lista = []
-print(lista)
+# lista = []
+# print(lista)
 
 
-# dodajemy element "1" do listy
-lista.append(1)
-print(lista)
+# # dodajemy element "1" do listy
+# lista.append(1)
+# print(lista)
 
-lista.append(2)
-lista.append(2)
-lista.append(5)
-lista.append(2)
+# lista.append(2)
+# lista.append(2)
+# lista.append(5)
+# lista.append(2)
 
-lista.append("ala ma kota")
-print(lista)
+# lista.append("ala ma kota")
+# print(lista)
 
-# usuwanie 
-lista.remove(2)
-print(lista)
+# # usuwanie
+# lista.remove(2)
+# print(lista)
 
+# czy element jest na liście
+# if 5 in lista:
+#     print("5 jest na liście, usuwam")
+#     lista.remove(5)
+# print(lista)
 
-if 5 in lista:
-    print("5 jest na liście, usuwam")
-    lista.remove(5)
-print(lista)
-
-# wstawienie obiektu przed element o podanym indeksie - tutaj index=2
-lista.insert(2, "napis")
-print(lista)
+# # wstawienie obiektu przed element o podanym indeksie - tutaj index=2
+# lista.insert(2, "napis")
+# print(lista)
 
 
 ### ZADANIE
