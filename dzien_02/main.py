@@ -206,3 +206,36 @@
 # Stwórz dwie listy. Każda z list ma zawierać 10 liczb losowych z zakresu 1-100.
 # Połącz te dwie listy do jednej i wyświetl na konsoli.
 
+# from random import randint
+
+# list_a = []
+# list_b = []
+
+# for _ in range(10):
+#     list_a.append(randint(1, 100))
+#     list_b.append(randint(1, 100))
+
+# list_c = list_a + list_b
+# print(list_c)
+
+
+# list comprehention = lista składana
+
+# from random import randint
+
+# lista_a = []
+# for i in range(10):
+#     lista_a.append(i)
+
+# print(lista_a)
+    
+# # krócej = list comprehention:
+# lista_b = [i for i in range(10)]
+# print(lista_b)
+
+
+
+#### ZADANIE
+
+# Korzystając z list składanych wygeneruj listę 10 kolejnych potęg dwójki.
+# Wyświetl tę listę. Spróbuj zrobić to w jak najkrótszym zapisie.
