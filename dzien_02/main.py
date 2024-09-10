@@ -90,30 +90,36 @@
 
 # zakresy w liście
 
-lista = list(range(20))
-print(lista)
+# lista = list(range(20))
+# print(lista)
 
-# elementy o indeksach od 0 do 3 włącznie
-print(lista[0:3])
+# # elementy o indeksach od 0 do 3 włącznie
+# print(lista[0:3])
 
-# elementy o indeksach od 10 do 16 włącznie
-print(lista[10:16])
+# # elementy o indeksach od 10 do 16 włącznie
+# print(lista[10:16])
 
-# pierwsze 5 elementów
-print(lista[:5])
+# # pierwsze 5 elementów
+# print(lista[:5])
 
-# ostatni elemnt
-print(lista[-1])
+# # ostatni elemnt
+# print(lista[-1])
 
-# ostatnie 5 elementów
-# tak "javowo"
-print(lista[len(lista)-5 : len(lista)])
-# pythonic-style
-print(lista[-5:])
+# # ostatnie 5 elementów
+# # tak "javowo"
+# print(lista[len(lista)-5 : len(lista)])
+# # pythonic-style
+# print(lista[-5:])
 
-# co 3 element
-# [od : do : krok]
-print(lista[::3])
+# # co 3 element
+# # [od : do : krok]
+# print(lista[::3])
 
-# od końca
-print(lista[::-1])
+# # od końca
+# print(lista[::-1])
+
+
+### ZADANIE
+
+# Napisz program, który pobierze od użytkownika 10 liczb,
+# zapamięta je (zapisze na liście), a na koniec wyświetli całą listę pobranych wartości od końca.
