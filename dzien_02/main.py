@@ -404,23 +404,23 @@
 
 
 # wczytanie pliku do listy list - dość uniwersalnie
-sep = ";"
-nazwa_pliku = "dane.csv"
-enc = "utf-8"
-lista_plik = [
-    linia.strip().split(sep)
-    for linia in open(nazwa_pliku, "r", encoding=enc)
-    if linia.strip()
-]
+# sep = ";"
+# nazwa_pliku = "dane.csv"
+# enc = "utf-8"
+# lista_plik = [
+#     linia.strip().split(sep)
+#     for linia in open(nazwa_pliku, "r", encoding=enc)
+#     if linia.strip()
+# ]
 
-# logika biznesowa
-for linia in lista_plik:
-    linia[0] = linia[0].upper()
-    linia[1] = linia[1].upper()
-    linia[2] = float(linia[2])
-    linia[3] = float(linia[3])
-    bmi = linia[3] / (linia[2] / 100) ** 2
-    linia.append(bmi)
+# # logika biznesowa
+# for linia in lista_plik:
+#     linia[0] = linia[0].upper()
+#     linia[1] = linia[1].upper()
+#     linia[2] = float(linia[2])
+#     linia[3] = float(linia[3])
+#     bmi = linia[3] / (linia[2] / 100) ** 2
+#     linia.append(bmi)
 
 # print(lista_plik)
 
@@ -581,7 +581,7 @@ for linia in lista_plik:
 # print(s)
 
 
-s1 = {1, 2, 2, 2, 3, 4, 5, 5, 5}
+# s1 = {1, 2, 2, 2, 3, 4, 5, 5, 5}
 # print("s1", s1)
 
 # s2 = {1, 2, 5, 6, 7}
@@ -607,3 +607,49 @@ s1 = {1, 2, 2, 2, 3, 4, 5, 5, 5}
 # Wygeneruj dwa zestawy, dodaj do nich po 20 losowych wartości z zakresu 1-40
 # (zestaw finalnie może mieć mniej niż 20 elementów).
 # Wyświetl sumę, różnicę i część wspólną takich zestawów.
+
+# import random
+
+# s1 = {random.randint(1, 40) for _ in range(20)}
+# s2 = {random.randint(1, 40) for _ in range(20)}
+
+# print("suma: ", s2.union(s1))
+# print("część wspólna: ", s1.intersection(s2))
+# print("s2 - s1: ", s2.difference(s1))
+# print("s1 - s2: ", s1.difference(s2))
+
+
+
+# usunięcie duplikatów z danych wejściowych
+
+# sep = ";"
+# nazwa_pliku = "dane.csv"
+# enc = "utf-8"
+
+# lista_plik = [
+#     tuple(linia.strip().split(sep))
+#     for linia in open(nazwa_pliku, "r", encoding=enc)
+#     if linia.strip()
+# ]
+
+# print(lista_plik)
+
+# set może być z elementów hashowalnych - np. tupli
+# set_plik = set(lista_plik)
+# print(set_plik)
+
+# class Pies:
+#     def __init__(self) -> None:
+#         pass
+
+# p1 = Pies()
+# p2 = Pies()
+
+# l = [ (1, 2), p1, (4, 5), 5, p2]
+# print(l)
+
+# print(tuple(l))
+# print(set(l))
+
+# print(p1.__hash__())
+# print(l.__hash__())
