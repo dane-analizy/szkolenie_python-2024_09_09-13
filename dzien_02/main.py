@@ -185,7 +185,7 @@
 # Python v3.7+
 # l3 = l1 + l2
 
-# Python wcześniejsze 
+# Python wcześniejsze
 # rozszerzenie - uwaga zmienia l1
 # l1.extend(l2)
 # print(l1)
@@ -193,7 +193,6 @@
 
 # l3 = [ *l1, *l2  ]
 # print(l3)
-
 
 
 # losowa liczba
@@ -228,11 +227,10 @@
 #     lista_a.append(i)
 
 # print(lista_a)
-    
+
 # # krócej = list comprehention:
 # lista_b = [i for i in range(10)]
 # print(lista_b)
-
 
 
 #### ZADANIE
@@ -245,7 +243,7 @@
 # for p in range(10):
 #     w = 2**p
 #     l.append(w)
-    
+
 # print(l)
 
 
@@ -266,7 +264,6 @@
 # print([2**p for p in range(10)])
 
 
-
 # lista składana z filtrowaniem
 # oryginał
 # l = []
@@ -284,7 +281,7 @@
 
 ### ZADANIE
 
-# Stwórz dwie listy. Każda z list ma zawierać losowe liczby z zakresu 1-100.
+# Stwórz dwie listy. Każda z list ma zawierać max 20 losowych liczb z zakresu 1-100.
 # Pierwsza ma zawierać tylko parzyste, druga - tylko nie parzyste.
 # Użyj list składanych do przygotowania tych list.
 # Wyświetl obie listy na ekranie.
