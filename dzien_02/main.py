@@ -466,7 +466,7 @@ for linia in lista_plik:
 
 # for el in ( i**2 for i in range(10) ):
 #     print(el)
-    
+
 # k2 = tuple([i**2 for i in range(10)])
 # print(k2)
 
@@ -476,3 +476,36 @@ for linia in lista_plik:
 # W jednej linijce zbuduj krotkę zawierającą kolejne potęgi liczby 3. A następnie zamień
 # te liczby na stringi (w ramach krotki) i posortuj je (tę krotkę) malejąco.
 
+# k = tuple([ str(3**p) for p in range(10)])
+# print(k)
+# k_s = sorted(k, reverse=True)
+# print(k_s)
+
+# wypisanie od tyłu
+# k = tuple([str(3**i) for i in range(10)])
+# print(k[::-1])
+
+
+import os
+
+# [
+#     ("../katalog", ["katalog_1", "katalog_2"], []),
+#     ("../katalog\\katalog_1", [], ["plik_1_1", "plik_1_2"]),
+#     ("../katalog\\katalog_2", [], ["plik2_1"]),
+# ]
+
+for dir_name, dir_list, file_list in os.walk("../katalog"):
+    print(f"W katalogu {dir_name} mamy:")
+    print("Katalogi:")
+    for dir in  dir_list:
+        print(f"\t{dir}")
+    print("Pliki:")
+    for file in file_list:
+        print(f"\t{file}")
+    print("---------")
+    
+    
+#### ZADANIE
+# Znajdź wszystkie pliki, które w nazwie mają ciąg podany przez użytkownika.
+# Wyświetl pełne ścieżki do nich.
+# Wielkość liter w nazwie plików nie ma znaczenia.
