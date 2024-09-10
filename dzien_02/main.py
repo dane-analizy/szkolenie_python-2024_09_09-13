@@ -32,6 +32,14 @@
 #     print(el)
 
 
+# lista_a = [1, 2]
+# for el in lista_a:
+#     print(el)
+#     print("koniec iteracji")
+# else:
+#     print("wszystkie iteracje przeszły")
+
+
 # dodawanie elementów do listy
 # lista = []
 # print(lista)
@@ -617,7 +625,6 @@
 # print("część wspólna: ", s1.intersection(s2))
 # print("s2 - s1: ", s2.difference(s1))
 # print("s1 - s2: ", s1.difference(s2))
-
 
 
 # usunięcie duplikatów z danych wejściowych
