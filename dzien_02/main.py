@@ -377,7 +377,6 @@
 # print(napis_na_nowo)
 
 
-
 ### ZADANIE
 
 # Napisz program który z pliku dane.csv wyświetli powiększone imię i nazwisko.
@@ -387,14 +386,13 @@
 #     linia_czysta = linia.strip()
 #     if len(linia_czysta) == 0:
 #         continue
-    
+
 #     linia_czysta = linia_czysta.split(";")
 #     linia_czysta[0] = linia_czysta[0].upper()
 #     lista_osob.append(linia_czysta)
-    
+
 # for osoba in lista_osob:
 #     print(osoba[0], osoba[1])
-
 
 
 ### ZADANIE
@@ -404,3 +402,42 @@
 
 # BMI = masa [kg] / wzrost^2 [m]
 
+
+# wczytanie pliku do listy list - dość uniwersalnie
+sep = ";"
+nazwa_pliku = "dane.csv"
+enc = "utf-8"
+lista_plik = [
+    linia.strip().split(sep)
+    for linia in open(nazwa_pliku, "r", encoding=enc)
+    if linia.strip()
+]
+
+# logika biznesowa
+for linia in lista_plik:
+    linia[0] = linia[0].upper()
+    linia[1] = linia[1].upper()
+    linia[2] = float(linia[2])
+    linia[3] = float(linia[3])
+    bmi = linia[3] / (linia[2] / 100) ** 2
+    linia.append(bmi)
+
+# print(lista_plik)
+
+
+# sortowanie list
+# l = [1, 5, 9, 3, 2, 4]
+# print(sorted(l))  # zwraca posortowaną listę, nie zmienia oryginału
+
+# l.sort()  # sortuje listę "w miejscu" - pozostaje przesortowana
+# print(l)
+
+
+# l = [ "1", "abads", "9", "13515", "2", "4", "!", "ą", "ż", "deef" ]
+# print(sorted(l))
+
+# po którym polu sortować
+# print(sorted(lista_plik, key=lambda el: el[2]))
+
+# po którym polu sortować, w jakiej kolejności
+# print(sorted(lista_plik, key=lambda el: el[3], reverse=True))
