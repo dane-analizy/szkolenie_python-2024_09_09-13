@@ -286,6 +286,7 @@
 # Użyj list składanych do przygotowania tych list.
 # Wyświetl obie listy na ekranie.
 
+# rozwiązanie 1
 
 # import random
 
@@ -296,3 +297,19 @@
 # lista_losowych = [random.randint(1, 100) for _ in range(20)]
 # lista_nieparzystych = [el for el in lista_losowych if el % 2 != 0]
 # print(lista_nieparzystych)
+
+
+# rozwiązanie 2
+import random
+
+lista_losowych = [random.randint(1, 100) for _ in range(40)]
+
+lista_parzystych = [el for el in lista_losowych if el % 2 == 0]
+print(len(lista_parzystych))
+lista_parzystych = lista_parzystych[:20]
+print(len(lista_parzystych))
+print(lista_parzystych)
+
+lista_nieparzystych = [el for el in lista_losowych if el % 2 != 0][:20]
+print(len(lista_nieparzystych))
+print(lista_nieparzystych)
