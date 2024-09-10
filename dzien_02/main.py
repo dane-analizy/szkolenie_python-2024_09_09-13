@@ -93,16 +93,17 @@
 # lista = list(range(20))
 # print(lista)
 
-# # elementy o indeksach od 0 do 3 włącznie
+# 3 elementy o indeksach od 0  włącznie
 # print(lista[0:3])
 
-# # elementy o indeksach od 10 do 16 włącznie
+
+# elementy o indeksach od 10 do 16, ale bez 16
 # print(lista[10:16])
 
 # # pierwsze 5 elementów
 # print(lista[:5])
 
-# # ostatni elemnt
+# # ostatni element
 # print(lista[-1])
 
 # # ostatnie 5 elementów
