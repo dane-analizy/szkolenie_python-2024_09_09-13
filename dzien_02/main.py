@@ -486,7 +486,6 @@ for linia in lista_plik:
 # print(k[::-1])
 
 
-
 # [
 #     ("../katalog", ["katalog_1", "katalog_2"], []),
 #     ("../katalog\\katalog_1", [], ["plik_1_1", "plik_1_2"]),
@@ -504,8 +503,8 @@ for linia in lista_plik:
 #     for file in file_list:
 #         print(f"\t{file}")
 #     print("---------")
-    
-    
+
+
 #### ZADANIE
 # Znajdź wszystkie pliki, które w nazwie mają ciąg podany przez użytkownika.
 # Wyświetl pełne ścieżki do nich.
@@ -538,7 +537,6 @@ for linia in lista_plik:
 # print(plik.exists())
 
 
-
 # rozwiązanie zadania z użyciem Pathlib
 # from pathlib import Path
 
@@ -549,7 +547,63 @@ for linia in lista_plik:
 # for element in p.rglob("*"):
 #     if element.is_dir():
 #         continue
-    
+
 #     if name.lower() in element.name.lower():
 #         print(f"Znalazłem plik {element.name} w katalogu {element}")
 
+
+# zestawy = sety
+# l = [1, 2, 2, 3, 3, 3, 4]
+# print(l)
+
+# k = tuple(l)
+# print(k)
+
+# s = set(k)
+# print(s)
+
+# print(set(range(10)))
+
+# s = {1, 2, 2, 2, 3, 4, 5, 5, 5}
+# print(s)
+
+# s.add(6)
+# print(s)
+
+# s.remove(3)
+# print(s)
+
+# print(s.pop())
+# print(s)
+# print(s.pop())
+# print(s)
+# print(s.pop())
+# print(s)
+
+
+s1 = {1, 2, 2, 2, 3, 4, 5, 5, 5}
+# print("s1", s1)
+
+# s2 = {1, 2, 5, 6, 7}
+# print("s2", s2)
+
+# print(s1.intersection(s2))
+# print(s2.union(s1))
+# print(s2.difference(s1))
+# print(s1.difference(s2))
+
+
+# if 3 in s1:
+#     print("3 jest w s1")
+# else:
+#     print("3 nie ma w s1")
+
+# s = { el for el in range(20)}
+# print(s)
+
+
+### ZADANIE
+
+# Wygeneruj dwa zestawy, dodaj do nich po 20 losowych wartości z zakresu 1-40
+# (zestaw finalnie może mieć mniej niż 20 elementów).
+# Wyświetl sumę, różnicę i część wspólną takich zestawów.
