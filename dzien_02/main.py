@@ -300,16 +300,30 @@
 
 
 # rozwiązanie 2
-import random
+# import random
 
-lista_losowych = [random.randint(1, 100) for _ in range(40)]
+# lista_losowych = [random.randint(1, 100) for _ in range(40)]
 
-lista_parzystych = [el for el in lista_losowych if el % 2 == 0]
-print(len(lista_parzystych))
-lista_parzystych = lista_parzystych[:20]
-print(len(lista_parzystych))
-print(lista_parzystych)
+# lista_parzystych = [el for el in lista_losowych if el % 2 == 0]
+# print(len(lista_parzystych))
+# lista_parzystych = lista_parzystych[:20]
+# print(len(lista_parzystych))
+# print(lista_parzystych)
 
-lista_nieparzystych = [el for el in lista_losowych if el % 2 != 0][:20]
-print(len(lista_nieparzystych))
-print(lista_nieparzystych)
+# lista_nieparzystych = [el for el in lista_losowych if el % 2 != 0][:20]
+# print(len(lista_nieparzystych))
+# print(lista_nieparzystych)
+
+
+# listy list
+
+l = [
+    [1, 2, 3],
+    ["a", "b", "c"],
+    [10, "ala", 130]
+]
+
+print(l)
+
+
+print(l[2][1])
