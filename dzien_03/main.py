@@ -216,30 +216,85 @@ rodzina = {
 # (imie, nazwisko, wzrost, waga, bmi) o odpowiednich typów.
 # Zbuduj listę zawodników z tych struktur.
 
-# wczytanie pliku do listy list - dość uniwersalnie
-sep = ";"
-nazwa_pliku = "dane.csv"
-enc = "utf-8"
-lista_plik = [
-    linia.strip().split(sep)
-    for linia in open(nazwa_pliku, "r", encoding=enc)
-    if linia.strip()
-]
+# # wczytanie pliku do listy list - dość uniwersalnie
+# sep = ";"
+# nazwa_pliku = "dane.csv"
+# enc = "utf-8"
+# lista_plik = [
+#     linia.strip().split(sep)
+#     for linia in open(nazwa_pliku, "r", encoding=enc)
+#     if linia.strip()
+# ]
 
-# logika biznesowa
-lista_zawodnikow = []
-for linia in lista_plik:
-    linia[2] = float(linia[2])
-    linia[3] = float(linia[3])
-    bmi = linia[3] / (linia[2] / 100) ** 2
-    lista_zawodnikow.append({
-        "imie": linia[0],
-        "nazwisko": linia[1],
-        "wzrost": linia[2],
-        "waga": linia[3],
-        "bmi": bmi,
-    })
+# # logika biznesowa
+# lista_zawodnikow = []
+# for linia in lista_plik:
+#     linia[2] = float(linia[2])
+#     linia[3] = float(linia[3])
+#     bmi = linia[3] / (linia[2] / 100) ** 2
+#     lista_zawodnikow.append(
+#         {
+#             "imie": linia[0],
+#             "nazwisko": linia[1],
+#             "wzrost": linia[2],
+#             "waga": linia[3],
+#             "bmi": bmi,
+#         }
+#     )
 
-# wyświetlenie wyniku
-print(lista_zawodnikow)
+# # wyświetlenie wyniku
+# print(lista_zawodnikow)
 
+
+# # extras - zapisanie listy słowników do Excela za pomocą pandas
+# import pandas as pd
+
+# df = pd.DataFrame(lista_zawodnikow)
+# print(df)
+# df.to_excel("zawodnicy_z_bmi.xlsx", index=False)
+
+
+# zapisywanie plików
+
+# # wczytanie pliku do listy list - dość uniwersalnie
+# sep = ";"
+# nazwa_pliku = "dane.csv"
+# enc = "utf-8"
+# lista_plik = [
+#     linia.strip().split(sep)
+#     for linia in open(nazwa_pliku, "r", encoding=enc)
+#     if linia.strip()
+# ]
+
+
+# print(lista_plik)
+
+# wczytanie pliku z context-managerem with...as...:
+# sep = ";"
+# nazwa_pliku = "dane.csv"
+# enc = "utf-8"
+# with open(nazwa_pliku, "r", encoding=enc) as plik:
+#     lista_plik = [
+#         linia.strip().split(sep)
+#         for linia in plik
+#         if linia.strip()
+#     ]
+
+# print(lista_plik)
+
+
+# zapisanie listy do pliku
+# nazwa_pliku_zapis = "dane_zapisane.csv"
+# with open(nazwa_pliku_zapis, "w", encoding=enc) as plik:
+#     for rekord in lista_plik:
+#         linia_do_zapisania = sep.join(rekord) + "\n"
+#         plik.write(linia_do_zapisania)
+
+
+#### ZADANIE
+
+# Korzystając z danych z poprzedniego zadania (lista obiektów "zawodnik") utwórz plik
+# "zawodnicy_bmi.csv", który będzie zawierał informacje o zawodnikach razem z ich BMI.
+
+
+# sortowanie słowników
