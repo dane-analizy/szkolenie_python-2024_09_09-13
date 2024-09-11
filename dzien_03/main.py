@@ -363,7 +363,6 @@ rodzina = {
 # print(d_k)
 
 
-
 # jak długo trwa wykonywanie programu?
 # import time
 # import statistics
@@ -379,3 +378,13 @@ rodzina = {
 
 # print(statistics.mean(lista_czasow))
 # print(statistics.stdev(lista_czasow))
+
+
+
+### ZADANIE
+
+# Policz ile razy występują poszczególne słowa w tekście "Pana Tadeusza".
+# Użyj słowników - kluczem niech będzie słowo zapisane małymi literami,
+# a wartością - liczba jego wystąpień.
+
+
