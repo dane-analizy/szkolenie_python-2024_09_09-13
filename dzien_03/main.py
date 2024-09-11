@@ -216,3 +216,30 @@ rodzina = {
 # (imie, nazwisko, wzrost, waga, bmi) o odpowiednich typów.
 # Zbuduj listę zawodników z tych struktur.
 
+# wczytanie pliku do listy list - dość uniwersalnie
+sep = ";"
+nazwa_pliku = "dane.csv"
+enc = "utf-8"
+lista_plik = [
+    linia.strip().split(sep)
+    for linia in open(nazwa_pliku, "r", encoding=enc)
+    if linia.strip()
+]
+
+# logika biznesowa
+lista_zawodnikow = []
+for linia in lista_plik:
+    linia[2] = float(linia[2])
+    linia[3] = float(linia[3])
+    bmi = linia[3] / (linia[2] / 100) ** 2
+    lista_zawodnikow.append({
+        "imie": linia[0],
+        "nazwisko": linia[1],
+        "wzrost": linia[2],
+        "waga": linia[3],
+        "bmi": bmi,
+    })
+
+# wyświetlenie wyniku
+print(lista_zawodnikow)
+
