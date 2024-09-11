@@ -564,3 +564,28 @@ rodzina = {
 #     d[slowo] = tresc.count(slowo)
 
 # print(time.perf_counter() - start_time)
+
+
+# sztuczne dane - pakiet Faker
+# instalacja:
+# pip install Faker
+# PEP8 - nazwy klas CamelCase
+
+# from faker import Faker
+
+# f = Faker("pl_PL")
+# print(f.name())
+# print(f.first_name())
+# print(f.last_name())
+# print(f.company())
+# print(f.street_name())
+# print(f.city())
+# print(f.phone_number())
+# print(f.job())
+# print(f.email())
+# print(f.uuid4())
+
+### ZADANIE
+
+# Korzystając z pakietu Faker wygeneruj plik zawierający 10 tysięcy rekordów zawierających:
+# id będący kolejną liczbą, imię, nazwisko, nazwa firmy, email, telefon, miasto
