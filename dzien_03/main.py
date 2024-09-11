@@ -380,7 +380,6 @@ rodzina = {
 # print(statistics.stdev(lista_czasow))
 
 
-
 ### ZADANIE
 
 # Policz ile razy występują poszczególne słowa w tekście "Pana Tadeusza".
@@ -388,4 +387,8 @@ rodzina = {
 # a wartością - liczba jego wystąpień.
 
 
+# wczytanie całego pliku do jednej zmiennej typu string
 tresc = open("tadzio.txt", "r", encoding="utf-8").read()
+
+# znaki do usunięcia
+zle_znaki = ",./?!()-;:\"'/\\…"
