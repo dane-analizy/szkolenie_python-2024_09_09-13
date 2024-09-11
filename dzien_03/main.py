@@ -387,46 +387,180 @@ rodzina = {
 # a wartością - liczba jego wystąpień.
 
 
-# wczytanie całego pliku do jednej zmiennej typu string
-tresc = open("tadzio.txt", "r", encoding="utf-8").read()
-tresc = tresc.lower()
+# rozwiązanie 1
+# import time
 
-# znaki do usunięcia
-zle_znaki = ",./?!()-—;:\"'/\\…\n\t*+«»<>"
+# # wczytanie całego pliku do jednej zmiennej typu string
+# tresc = open("tadzio.txt", "r", encoding="utf-8").read()
+# tresc = tresc.lower()
 
-# oczyszczenie tekstu
-for znak in zle_znaki:
-    tresc = tresc.replace(znak, " ")
+# # znaki do usunięcia
+# zle_znaki = ",./?!()-—;:\"'/\\…\n\t*+«»<>"
 
-slowa = tresc.split(" ")
+# # oczyszczenie tekstu
+# for znak in zle_znaki:
+#     tresc = tresc.replace(znak, " ")
 
-licznik_slow = {}
-for slowo in slowa:
-    # puste słowa omijamy
-    if not slowo:
-        continue
+# slowa = tresc.split(" ")
 
-    # pomijamy słowa krótsze niż 4 znaki
-    if len(slowo) <= 4:
-        continue
+# licznik_slow = {}
+# start_time = time.perf_counter()
+
+# for slowo in slowa:
+#     # puste słowa omijamy
+#     if not slowo:
+#         continue
+
+#     # pomijamy słowa krótsze niż 4 znaki
+#     if len(slowo) <= 4:
+#         continue
     
-    # można sprawdzać czy słowo jest na liście tzw. stop-words https://github.com/bieli/stopwords/blob/master/polish.stopwords.txt
+#     # można sprawdzać czy słowo jest na liście tzw. stop-words https://github.com/bieli/stopwords/blob/master/polish.stopwords.txt
     
-    # zwiększamy licznik wystąpień dla słowa o 1 jeśli istniał
-    if slowo in licznik_slow.keys():
-        licznik_slow[slowo] = licznik_slow[slowo] + 1
-    else:
-        # licznik nie istniał - "tworzymy" nowy dla nowego słowa
-        licznik_slow[slowo] = 1
+#     # zwiększamy licznik wystąpień dla słowa o 1 jeśli istniał
+#     if slowo in licznik_slow.keys():
+#         licznik_slow[slowo] = licznik_slow[slowo] + 1
+#     else:
+#         # licznik nie istniał - "tworzymy" nowy dla nowego słowa
+#         licznik_slow[slowo] = 1
         
-# ile razy występuje "tadeusz"
-print(licznik_slow['tadeusz'])
+# print(time.perf_counter()-start_time)
 
-# jakie słowa i ile razy występują zaczynają się od "tadeusz"?
-for k,v in licznik_slow.items():
-    if k.startswith("tadeusz"):
-        print(k,v)
+# # ile razy występuje "tadeusz"
+# print(licznik_slow['tadeusz'])
 
-# najpopularniejsze słowa
-licznik_slow = sorted(licznik_slow.items(), key=lambda kv: kv[1])
-print(licznik_slow)
+# # jakie słowa i ile razy występują zaczynają się od "tadeusz"?
+# for k,v in licznik_slow.items():
+#     if k.startswith("tadeusz"):
+#         print(k,v)
+
+# # najpopularniejsze słowa
+# licznik_slow = sorted(licznik_slow.items(), key=lambda kv: kv[1])
+# print(licznik_slow)
+
+
+
+# rozwiązanie 2
+
+# # wczytanie całego pliku do jednej zmiennej typu string
+# tresc = open("tadzio.txt", "r", encoding="utf-8").read()
+# tresc = tresc.lower()
+
+# # znaki do usunięcia
+# zle_znaki = ",./?!()-—;:\"'/\\…\n\t*+«»<>"
+
+# # oczyszczenie tekstu
+# for znak in zle_znaki:
+#     tresc = tresc.replace(znak, " ")
+
+# slowa = tresc.split(" ")
+
+
+# licznik_slow = {}
+# for slowo in slowa:
+#     # pomijamy słowa krótsze niż 4 znaki
+#     if len(slowo) <= 4:
+#         continue
+
+#     # zwiększamy licznik wystąpień dla słowa o 1 jeśli istniał
+#     licznik_slow[slowo] = licznik_slow.get(slowo, 0) + 1
+
+# # najpopularniejsze słowa
+# licznik_slow = sorted(licznik_slow.items(), key=lambda kv: kv[1])
+# print(licznik_slow)
+
+
+
+# rozwiązanie 3
+
+# from collections import defaultdict
+
+
+# # wczytanie całego pliku do jednej zmiennej typu string
+# tresc = open("tadzio.txt", "r", encoding="utf-8").read()
+# tresc = tresc.lower()
+
+# # znaki do usunięcia
+# zle_znaki = ",./?!()-—;:\"'/\\…\n\t*+«»<>"
+
+# # oczyszczenie tekstu
+# for znak in zle_znaki:
+#     tresc = tresc.replace(znak, " ")
+
+# slowa = tresc.split(" ")
+
+
+# # słownik, który zwróci wartość 0 dla kluczy które nie istnieją
+# licznik_slow = defaultdict(lambda: 0)
+
+# for slowo in slowa:
+#     # pomijamy słowa krótsze niż 4 znaki
+#     if len(slowo) <= 4:
+#         continue
+
+#     # zwiększamy licznik wystąpień dla słowa o 1 jeśli istniał
+#     licznik_slow[slowo] = licznik_slow[slowo] + 1 
+
+# # najpopularniejsze słowa
+# licznik_slow = sorted(licznik_slow.items(), key=lambda kv: kv[1])
+# print(licznik_slow)
+
+
+# rozwiązanie 4
+
+# from collections import Counter
+# import time
+
+# # wczytanie całego pliku do jednej zmiennej typu string
+# tresc = open("tadzio.txt", "r", encoding="utf-8").read()
+# tresc = tresc.lower()
+
+# # znaki do usunięcia
+# zle_znaki = ",./?!()-—;:\"'/\\…\n\t*+«»<>"
+
+# # oczyszczenie tekstu
+# for znak in zle_znaki:
+#     tresc = tresc.replace(znak, " ")
+
+# slowa = tresc.split(" ")
+
+
+# start_time = time.perf_counter()
+# licznik_slow = {k: v for k, v in Counter(slowa).items() if len(k) > 4}
+# print(time.perf_counter()-start_time)
+
+# # najpopularniejsze słowa
+# licznik_slow = sorted(licznik_slow.items(), key=lambda kv: kv[1])
+# # print(licznik_slow)
+
+
+# from collections import Counter
+
+# lista = [1, 2, 3, 4, 5, 5, 5, 3]
+# print(Counter(lista))
+
+
+# rozwiązanie 5
+
+# import time
+
+# # wczytanie całego pliku do jednej zmiennej typu string
+# tresc = open("tadzio.txt", "r", encoding="utf-8").read()
+# tresc = tresc.lower()
+
+# # znaki do usunięcia
+# zle_znaki = ",./?!()-—;:\"'/\\…\n\t*+«»<>"
+
+# # oczyszczenie tekstu
+# for znak in zle_znaki:
+#     tresc = tresc.replace(znak, " ")
+
+# slowa = [s for s in tresc.split(" ") if len(s) > 4]
+# unikalne_slowa = set(slowa)
+
+# d = {}
+# start_time = time.perf_counter()
+# for slowo in unikalne_slowa:
+#     d[slowo] = tresc.count(slowo)
+
+# print(time.perf_counter() - start_time)
