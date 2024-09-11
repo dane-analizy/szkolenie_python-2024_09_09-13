@@ -389,6 +389,44 @@ rodzina = {
 
 # wczytanie całego pliku do jednej zmiennej typu string
 tresc = open("tadzio.txt", "r", encoding="utf-8").read()
+tresc = tresc.lower()
 
 # znaki do usunięcia
-zle_znaki = ",./?!()-;:\"'/\\…"
+zle_znaki = ",./?!()-—;:\"'/\\…\n\t*+«»<>"
+
+# oczyszczenie tekstu
+for znak in zle_znaki:
+    tresc = tresc.replace(znak, " ")
+
+slowa = tresc.split(" ")
+
+licznik_slow = {}
+for slowo in slowa:
+    # puste słowa omijamy
+    if not slowo:
+        continue
+
+    # pomijamy słowa krótsze niż 4 znaki
+    if len(slowo) <= 4:
+        continue
+    
+    # można sprawdzać czy słowo jest na liście tzw. stop-words https://github.com/bieli/stopwords/blob/master/polish.stopwords.txt
+    
+    # zwiększamy licznik wystąpień dla słowa o 1 jeśli istniał
+    if slowo in licznik_slow.keys():
+        licznik_slow[slowo] = licznik_slow[slowo] + 1
+    else:
+        # licznik nie istniał - "tworzymy" nowy dla nowego słowa
+        licznik_slow[slowo] = 1
+        
+# ile razy występuje "tadeusz"
+print(licznik_slow['tadeusz'])
+
+# jakie słowa i ile razy występują zaczynają się od "tadeusz"?
+for k,v in licznik_slow.items():
+    if k.startswith("tadeusz"):
+        print(k,v)
+
+# najpopularniejsze słowa
+licznik_slow = sorted(licznik_slow.items(), key=lambda kv: kv[1])
+print(licznik_slow)
