@@ -388,3 +388,4 @@ rodzina = {
 # a wartością - liczba jego wystąpień.
 
 
+tresc = open("tadzio.txt", "r", encoding="utf-8").read()
