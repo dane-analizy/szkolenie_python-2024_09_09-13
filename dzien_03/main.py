@@ -296,5 +296,51 @@ rodzina = {
 # Korzystając z danych z poprzedniego zadania (lista obiektów "zawodnik") utwórz plik
 # "zawodnicy_bmi.csv", który będzie zawierał informacje o zawodnikach razem z ich BMI.
 
+# wczytanie pliku do listy list - dość uniwersalnie
+sep = ";"
+nazwa_pliku = "dane.csv"
+enc = "utf-8"
+lista_plik = [
+    linia.strip().split(sep)
+    for linia in open(nazwa_pliku, "r", encoding=enc)
+    if linia.strip()
+]
+
+# logika biznesowa
+lista_zawodnikow = []
+for linia in lista_plik:
+    linia[2] = float(linia[2])
+    linia[3] = float(linia[3])
+    bmi = linia[3] / (linia[2] / 100) ** 2
+    lista_zawodnikow.append(
+        {
+            "imie": linia[0],
+            "nazwisko": linia[1],
+            "wzrost": linia[2],
+            "waga": linia[3],
+            "bmi": bmi,
+        }
+    )
+
+
+lista_zawodnikow.append(
+    {
+        "wzrost": 175,
+        "imie": "Henio",
+        "waga": 87,
+        "nazwisko": "Iksiński",
+    }
+)
+
+
+# zapisanie do pliku
+nazwa_pliku_zapis = "dane_zapisane.csv"
+with open(nazwa_pliku_zapis, "w", encoding=enc) as plik:
+    for rekord in lista_zawodnikow:
+        # wartosci = [str(w) for w in rekord.values()]
+        # linia_do_zapisania = sep.join(wartosci) + "\n"
+        linia_do_zapisania = f'{rekord.get("imie", "")};{rekord.get("nazwisko", "")};{rekord.get("wzrost", "")};{rekord.get("waga", "")};{rekord.get("bmi", "")}\n'
+        plik.write(linia_do_zapisania)
+
 
 # sortowanie słowników
