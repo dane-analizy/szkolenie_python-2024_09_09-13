@@ -414,16 +414,16 @@ rodzina = {
 #     # pomijamy słowa krótsze niż 4 znaki
 #     if len(slowo) <= 4:
 #         continue
-    
+
 #     # można sprawdzać czy słowo jest na liście tzw. stop-words https://github.com/bieli/stopwords/blob/master/polish.stopwords.txt
-    
+
 #     # zwiększamy licznik wystąpień dla słowa o 1 jeśli istniał
 #     if slowo in licznik_slow.keys():
 #         licznik_slow[slowo] = licznik_slow[slowo] + 1
 #     else:
 #         # licznik nie istniał - "tworzymy" nowy dla nowego słowa
 #         licznik_slow[slowo] = 1
-        
+
 # print(time.perf_counter()-start_time)
 
 # # ile razy występuje "tadeusz"
@@ -437,7 +437,6 @@ rodzina = {
 # # najpopularniejsze słowa
 # licznik_slow = sorted(licznik_slow.items(), key=lambda kv: kv[1])
 # print(licznik_slow)
-
 
 
 # rozwiązanie 2
@@ -470,7 +469,6 @@ rodzina = {
 # print(licznik_slow)
 
 
-
 # rozwiązanie 3
 
 # from collections import defaultdict
@@ -499,7 +497,7 @@ rodzina = {
 #         continue
 
 #     # zwiększamy licznik wystąpień dla słowa o 1 jeśli istniał
-#     licznik_slow[slowo] = licznik_slow[slowo] + 1 
+#     licznik_slow[slowo] = licznik_slow[slowo] + 1
 
 # # najpopularniejsze słowa
 # licznik_slow = sorted(licznik_slow.items(), key=lambda kv: kv[1])
@@ -589,3 +587,98 @@ rodzina = {
 
 # Korzystając z pakietu Faker wygeneruj plik typu CSV zawierający 10 tysięcy rekordów zawierających:
 # id będący kolejną liczbą, imię, nazwisko, nazwa firmy, email, telefon, miasto.
+
+
+# from faker import Faker
+
+# f = Faker("pl_PL")
+
+# faker_list = []
+# for i in range(10_000):
+#     faker_list.append(
+#         {
+#             "firstName": f.first_name(),
+#             "lastName": f.last_name(),
+#             "firma": f.company(),
+#             "email": f.email(),
+#             "phone": f.phone_number(),
+#         }
+#     )
+
+# with open("faker.txt", "w", encoding="utf-8") as file:
+#     for rec in faker_list:
+#         file.write(
+#             rec.get("firstName")
+#             + ";"
+#             + rec.get("lastName")
+#             + ";"
+#             + rec.get("firma")
+#             + ";"
+#             + rec.get("email")
+#             + ";"
+#             + rec.get("phone")
+#             + "\n"
+#         )
+
+
+# pliki json
+
+# import json
+
+# from faker import Faker
+
+# f = Faker("pl_PL")
+
+# faker_list = []
+# for i in range(10):
+#     faker_list.append(
+#         {
+#             "id": i,
+#             "firstName": f.first_name(),
+#             "lastName": f.last_name(),
+#             "firma": f.company(),
+#             "email": f.email(),
+#             "phone": f.phone_number(),
+#         }
+#     )
+
+# # zapis do jsona w pliku
+# with open("ludzie.json", "w", encoding="utf-8") as plik:
+#     json.dump(faker_list, plik)
+
+# # zapis do jsona w zmiennej typu string
+# json_str = json.dumps(faker_list)
+# print(json_str)
+
+
+# import json
+
+# # wczytanie jsona z pliku
+# with open("ludzie.json", "r", encoding="utf-8") as plik:
+#     dane = json.load(plik)
+    
+# # wczytanie ze stringa: json.loads(string)
+
+# print(dane)
+# for d in dane:
+#     print(d)
+#     print(type(d))
+#     break
+
+
+import json
+
+# wczytanie jsona z pliku
+with open("ludek.json", "r", encoding="utf-8") as plik:
+    dane = json.load(plik)
+
+print(dane)
+print(type(dane))
+
+# czy wczytane dane są listą czy słownikiem?
+if isinstance(dane, list):
+    print("To jest lista")
+elif isinstance(dane, dict):
+    print("To jest słownik")
+else:
+    print("HGW co to jest")

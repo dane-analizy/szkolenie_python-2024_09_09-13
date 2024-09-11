@@ -1,0 +1,82 @@
+[
+    {
+        "id": 0,
+        "firstName": "Juliusz",
+        "lastName": "Drobniak",
+        "firma": "Pre\u015b-Januchta s.c.",
+        "email": "slyszmariusz@example.com",
+        "phone": "501 136 746"
+    },
+    {
+        "id": 1,
+        "firstName": "Robert",
+        "lastName": "Bakun",
+        "firma": "Kr\u0119cichwost-Rezmer s.c.",
+        "email": "emilhudzik@example.org",
+        "phone": "+48 739 480 272"
+    },
+    {
+        "id": 2,
+        "firstName": "Fryderyk",
+        "lastName": "Jaroch",
+        "firma": "Sp\u00f3\u0142dzielnia Kochanowicz s.c.",
+        "email": "cezarygawliczek@example.com",
+        "phone": "+48 781 162 588"
+    },
+    {
+        "id": 3,
+        "firstName": "Ryszard",
+        "lastName": "Wiercigroch",
+        "firma": "Bru\u015b-Niebudek i syn s.c.",
+        "email": "sylwia50@example.net",
+        "phone": "796 786 454"
+    },
+    {
+        "id": 4,
+        "firstName": "Leonard",
+        "lastName": "Wochnik",
+        "firma": "Korek-Gustaw S.A.",
+        "email": "ulesisz@example.com",
+        "phone": "733 626 575"
+    },
+    {
+        "id": 5,
+        "firstName": "Ernest",
+        "lastName": "Dorobek",
+        "firma": "FPUH Biega\u0142a-Zieniewicz s.c.",
+        "email": "danielukjerzy@example.org",
+        "phone": "+48 781 141 023"
+    },
+    {
+        "id": 6,
+        "firstName": "Filip",
+        "lastName": "Roszko",
+        "firma": "Kempka Sp. z o.o.",
+        "email": "alan15@example.net",
+        "phone": "570 307 841"
+    },
+    {
+        "id": 7,
+        "firstName": "Damian",
+        "lastName": "Linkiewicz",
+        "firma": "Fundacja Wiel\u0105dek Sp. z o.o. Sp.k.",
+        "email": "krystiansornat@example.com",
+        "phone": "+48 663 141 400"
+    },
+    {
+        "id": 8,
+        "firstName": "Filip",
+        "lastName": "Gu\u017aniczak",
+        "firma": "Sp\u00f3\u0142dzielnia Ska\u0142a Sp. z o.o. Sp.k.",
+        "email": "malwinajeszka@example.net",
+        "phone": "660 317 317"
+    },
+    {
+        "id": 9,
+        "firstName": "Marcelina",
+        "lastName": "Szumacher",
+        "firma": "Stowarzyszenie Kozubal Sp. z o.o. Sp.k.",
+        "email": "dagmarasus@example.org",
+        "phone": "889 595 214"
+    }
+]

@@ -1,0 +1,10 @@
+{
+    "osoba": {
+        "id": 0,
+        "firstName": "Juliusz",
+        "lastName": "Drobniak",
+        "firma": "Pre\u015b-Januchta s.c.",
+        "email": "slyszmariusz@example.com",
+        "phone": "501 136 746"
+    }
+}
