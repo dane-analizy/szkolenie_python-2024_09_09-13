@@ -587,5 +587,5 @@ rodzina = {
 
 ### ZADANIE
 
-# Korzystając z pakietu Faker wygeneruj plik zawierający 10 tysięcy rekordów zawierających:
-# id będący kolejną liczbą, imię, nazwisko, nazwa firmy, email, telefon, miasto
+# Korzystając z pakietu Faker wygeneruj plik typu CSV zawierający 10 tysięcy rekordów zawierających:
+# id będący kolejną liczbą, imię, nazwisko, nazwa firmy, email, telefon, miasto.
