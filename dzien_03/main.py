@@ -365,16 +365,17 @@ rodzina = {
 
 
 # jak długo trwa wykonywanie programu?
-import time
-import math
+# import time
+# import statistics
 
-lista_czasow = []
-for _ in range(1000):
-    # liczba sekund od chwili 1970-01-01 00:00:00
-    start = time.perf_counter()
-    # wstrzymanie programu na 0.1 sekundy
-    time.sleep(.1)
-    end = time.perf_counter()
-    lista_czasow.append(end-start)
+# lista_czasow = []
+# for _ in range(100):
+#     # liczba sekund od chwili 1970-01-01 00:00:00
+#     start = time.perf_counter()
+#     # wstrzymanie programu na 0.1 sekundy
+#     time.sleep(.1)
+#     end = time.perf_counter()
+#     lista_czasow.append(end-start)
 
-print(math.mean(lista_czasow))
+# print(statistics.mean(lista_czasow))
+# print(statistics.stdev(lista_czasow))
