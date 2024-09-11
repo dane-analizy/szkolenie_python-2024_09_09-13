@@ -1,3 +1,8 @@
 login=lukasz
+
+
 haslo=wiosna2024
-numertelefonu=123456789
+numertelefonu=123456789=dalszyciag=numertelefonu=
+
+
+baza_danych=baza

@@ -141,7 +141,7 @@ rodzina = {
 # d = {}
 # for klucz, wartosc in zip(klucze, wartosci):
 #     d[klucz] = wartosc
-    
+
 # print(d)
 
 
@@ -155,3 +155,64 @@ rodzina = {
 # "haslo": "wiosna2024",
 # "numertelefonu": "123456789",
 # }
+
+# rozwiazanie 1
+# s1 = dict()
+
+# for linia in open("konfiguracja.txt", "r", encoding="utf-8"):
+#     linia_czysta = linia.strip()
+#     if len(linia_czysta) == 0:
+#         continue
+#     linia_czysta = linia_czysta.split("=")
+#     s1[linia_czysta[0]] = linia_czysta[1]
+
+# print(s1)
+
+
+# rozwiązanie 2 - dict comprehension
+
+# s1 = {
+#     linia.strip().split("=")[0]: "=".join(linia.strip().split("=")[1:])
+#     # linia.strip().split("=")[0]: linia.strip().split("=")[1:]
+#     for linia in open("konfiguracja.txt", "r", encoding="utf-8")
+#     if linia.strip()
+# }
+
+# print(s1)
+
+
+# pip install pandas openpyxl
+# import pandas as pd
+
+# dane_xls = pd.read_excel("pogoda.xlsx")
+# print(dane_xls)
+
+# print(dane_xls[dane_xls['temp'] > 20])
+
+# dane_dict = {}
+# for r in dane_xls.itertuples():
+#     # print(r, r.data)
+#     dane_dict[str(r.data.date())] = {"temp": r.temp, "cisnienie": r.cisnienie, "opad": r.opad}
+
+# print(dane_dict)
+
+# print(dane_dict['2024-09-08'])
+
+# dane_dzienne = {
+#     (2024, 9, 9): {...},
+#     (2024, 9, 10): {...},
+# }
+
+# for y in [2022, 2023, 2024]:
+#     for m in range(1, 13):
+#         for d in range(1, 31):
+#             print(dane_dzienne.get((y, m, d)))
+
+
+#### ZADANIE
+
+# Wczytaj z pliku data.csv dane o zawodnikach. Policz dla nich BMI.
+# Każdego zawodnika "ubierz" w strukturę typu słownik, z odpowiednimi kluczami
+# (imie, nazwisko, wzrost, waga, bmi) o odpowiednich typów.
+# Zbuduj listę zawodników z tych struktur.
+
