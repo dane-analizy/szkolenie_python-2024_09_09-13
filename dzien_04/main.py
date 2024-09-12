@@ -262,7 +262,7 @@
 
 # rozwiązanie
 
-# powatał plik obliczenia.py
+# powstał plik obliczenia.py
 
 # użycie moduły:
 # from obliczenia import bmi

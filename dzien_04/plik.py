@@ -39,5 +39,12 @@ def wczytaj(nazwa_pliku, enc="utf-8", sep=";"):
     return lista_podzielona
 
 
+def zapisz(lista_krotek, nazwa_pliku, enc="utf-8", sep=";"):
+    with open(nazwa_pliku, "w", encoding=enc) as plik:
+        for krotka in lista_krotek:
+            linia_do_zapisania = sep.join(krotka) + "\n"
+            plik.write(linia_do_zapisania)
+
+
 if __name__ == "__main__":
     print(wczytaj("dane.csv"))
