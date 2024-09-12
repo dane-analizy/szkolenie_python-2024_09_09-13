@@ -395,3 +395,9 @@ def notowania_nbp(rok=2024, miesiac=9, dzien=12, waluty=["EUR", "USD", "CHF"]):
             wynik[kwotowanie["code"]] = kwotowanie["mid"]
 
     return wynik
+
+
+#  print(notowania_nbp(2024, 9, 10, ['EUR', 'GBP']))
+
+
+#### 
