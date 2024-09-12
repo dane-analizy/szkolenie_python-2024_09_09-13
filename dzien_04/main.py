@@ -258,4 +258,20 @@
 ### ZADANIE
 
 # Zbuduj moduł obliczenia zawierający funkcję liczącą BMI.
+# Użyj tej funkcji w kodzie w ramach main.py.
 
+# rozwiązanie
+
+# powatał plik obliczenia.py
+
+# użycie moduły:
+# from obliczenia import bmi
+# print(bmi(80, 180))
+
+
+### ZADANIE
+
+# Do modułu plik dodaj funkcję zapis(), która zapisze do pliku listę krotek.
+# Elementy krotki rozdzielone powinny być separatorem (= argument funkcji, domyślnie ;),
+# plik powinien mieć odpowiednie kodowanie (= argument, domyślnie utf-8)
+# i nazwę (= argument).
