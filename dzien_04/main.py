@@ -214,4 +214,4 @@
 # Korzystając z poprzednio pisanego kodu - zbuduj funkcję, która wczyta do listy krotek plik csv rozdzielony ";"
 # Wynikiem działania funkcji (powinna to zwracać) ma być ta lista krotek, a argumentem - nazwa pliku.
 
-# rozwiązanie w pliku plik.py
+# rozwiązanie w pliku plik_1.py
