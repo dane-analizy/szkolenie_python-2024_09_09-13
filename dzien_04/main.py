@@ -151,31 +151,60 @@
 # BMI z dokładnością do 2 miejsc po przecinku. W przypadku pojawienia się wyjątku - wypisze na konsoli
 # błąd i zwróci wartość -1
 
-def bmi(waga, wzrost):
-    if not isinstance(waga, (int, float)):
-        print("Waga musi być typu float lub int")
-        return -1
-    if not isinstance(wzrost, (int, float)):
-        print("Wzrost musi być typu float lub int")
-        return -1
+
+# rozwiazanie 1
+# def bmi(waga, wzrost):
+#     if not isinstance(waga, (int, float)):
+#         print("Waga musi być typu float lub int")
+#         return -1
+#     if not isinstance(wzrost, (int, float)):
+#         print("Wzrost musi być typu float lub int")
+#         return -1
     
-    if (waga < 0) or (wzrost < 0):
-        print("Wzrost i waga nie mogą być mniejsze od zera")
-        return -1
+#     if (waga < 0) or (wzrost < 0):
+#         print("Wzrost i waga nie mogą być mniejsze od zera")
+#         return -1
     
-    try:
-        wynik = round(waga / (wzrost / 100) ** 2, 2)
-        print("Wynik:", wynik)
-        return wynik
-    except Exception as e:
-        print("Błąd:", e)
-        return -1
+#     try:
+#         wynik = round(waga / (wzrost / 100) ** 2, 2)
+#         print("Wynik:", wynik)
+#         return wynik
+#     except Exception as e:
+#         print("Błąd:", e)
+#         return -1
 
-print("liczenie 1")
-print(bmi(80,180))
+# print("liczenie 1")
+# print(bmi(80,180))
 
-print("liczenie 2")
-print(bmi(80, "180"))
+# print("liczenie 2")
+# print(bmi(80, "180"))
 
-print("liczenie 3")
-print(bmi(80, -180))
+# print("liczenie 3")
+# print(bmi(80, -180))
+
+
+# rozwiązanie 2
+# def bmi(waga, wzrost):
+#     if not isinstance(waga, (int, float)):
+#         print("Waga musi być typu float lub int")
+#         raise TypeError
+#     if not isinstance(wzrost, (int, float)):
+#         print("Wzrost musi być typu float lub int")
+#         raise TypeError
+
+#     if (waga < 0) or (wzrost < 0):
+#         print("Wzrost i waga nie mogą być mniejsze od zera")
+#         raise ValueError
+
+#     wynik = round(waga / (wzrost / 100) ** 2, 2)
+#     return wynik
+
+
+# pary_wartosci = [(80, 180), (80, "180"), (80, -180)]
+# for i, para in enumerate(pary_wartosci, start=1):
+#     print(f"liczenie {i}")
+#     try:
+#         wynik = bmi(para[0], para[1])
+#         print(wynik)
+#     except Exception as e:
+#         print("Błąd:", e, type(e))
