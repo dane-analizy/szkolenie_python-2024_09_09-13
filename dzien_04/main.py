@@ -29,14 +29,13 @@
 # print("Program zakończony")
 
 
-
 # try:
 #     # wczytaj plik
 # except:
 #     # nie udało się wczytać pliku
 #     # kończę program - z błędem 10
 #     # exit(10)
-    
+
 # try:
 #     # otwórz połączenie z baza danych
 # except:
@@ -61,7 +60,7 @@
 #     print(el)
 #     if el == 0:
 #         raise NotImplementedError
-    
+
 # własne typy błędów
 
 # class WlasnyBlad(BaseException):
@@ -78,18 +77,34 @@
 #         raise NotImplementedError
 
 
-
 ## ZADANIE
 
 # Plik dane.csv zmodyfikuj tak, aby niektóre wiersze miały mniej niż 4 kolumny.
 # Wczytaj plik i podziel każdy wiersz na elementy w tablicy, rozdzielenie jest przez ";"
 # Wyświetl 4 element z każdej linii. Jeśli napotkasz błąd - obsłuż go.
 
-for i, linia in enumerate(open("dane.csv", "r", encoding="utf-8"), start=1):
-    lista_linia = linia.strip().split(";")
-    try:
-        print(lista_linia[3])
-    except IndexError as e:
-        print(f"Nieodpowiednia struktura w linii {i}")
-    except Exception as e:
-        print(f"Nieznany błąd: {e}")
+# for i, linia in enumerate(open("dane.csv", "r", encoding="utf-8"), start=1):
+#     lista_linia = linia.strip().split(";")
+#     try:
+#         print(lista_linia[3])
+# łapiemy błąd zwiazany z brakiem elementu o indeksie = 3
+#     except IndexError as e:
+#         print(f"Nieodpowiednia struktura w linii {i}")
+# łapiemy wszystkie inne potencjalne błędy
+#     except Exception as e:
+#         print(f"Nieznany błąd: {e}")
+
+
+
+## funkcje
+
+# print() <- to jest funkcja
+
+
+# # funkcja bez parametrów:
+# def funkcja():
+#     print("Jestem w funkcji 'funkcja'")
+
+# # wywołanie funkcji:
+# funkcja() 
+# funkcja()
