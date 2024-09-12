@@ -144,8 +144,10 @@
 # print("wywołanie funkcji", dodawanie(10.0, 52))
 
 
+
 ### ZADANIE
 
 # Przygotuj funkcję, która wyliczy na podstawie wagi i wzrostu (parametry)
 # BMI z dokładnością do 2 miejsc po przecinku. W przypadku pojawienia się wyjątku - wypisze na konsoli
-# błąd i zwróci wartość -1 
+# błąd i zwróci wartość -1
+
