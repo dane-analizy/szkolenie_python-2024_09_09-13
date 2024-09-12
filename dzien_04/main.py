@@ -374,35 +374,37 @@
 # res.json()
 # przeiterować po danych i wyświetlić odpowiednie elementy/klucze
 
-import random
-import time
+# import random
+# import time
 
-import requests
+# import requests
 
 
-def notowania_nbp(rok=2024, miesiac=9, dzien=12, waluty=["EUR", "USD", "CHF"]):
-    url = f"https://api.nbp.pl/api/exchangerates/tables/A/{rok}-{miesiac:02d}-{dzien:02d}/?format=json"
+# def notowania_nbp(rok=2024, miesiac=9, dzien=12, waluty=["EUR", "USD", "CHF"]):
+#     url = f"https://api.nbp.pl/api/exchangerates/tables/A/{rok}-{miesiac:02d}-{dzien:02d}/?format=json"
 
-    try:
-        time.sleep(random.choice([0.1, 0.25, 0.15, 0.05]))
-        res = requests.get(url)
-    except Exception as e:
-        print(f"Błąd dla {url=}: {e}")
-        return {}
+#     try:
+#         # czekamy losowo wybrany czas (losowanie z [0.1, 0.25, 0.15, 0.05]) żeby być miłym dla serwera
+#         time.sleep(random.choice([0.1, 0.25, 0.15, 0.05]))
+#         res = requests.get(url)
+#     except Exception as e:
+#         # być może się nie udało - serwer padł, internet padł, pożoga! - obsługujemy błąd
+#         print(f"Błąd dla {url=}: {e}")
+#         return {}
 
-    if res.status_code != 200:
-        print(f"Błąd pobrania danych dla {rok}-{miesiac:02d}-{dzien:02d}")
-        return {}
+#     if res.status_code != 200:
+#         print(f"Błąd pobrania danych dla {rok}-{miesiac:02d}-{dzien:02d}")
+#         return {}
 
-    data = res.json()[0]
+#     data = res.json()[0]
 
-    wynik = {"data_notowania": data["effectiveDate"]}
+#     wynik = {"data_notowania": data["effectiveDate"]}
 
-    for kwotowanie in data["rates"]:
-        if kwotowanie["code"] in waluty:
-            wynik[kwotowanie["code"]] = kwotowanie["mid"]
+#     for kwotowanie in data["rates"]:
+#         if kwotowanie["code"] in waluty:
+#             wynik[kwotowanie["code"]] = kwotowanie["mid"]
 
-    return wynik
+#     return wynik
 
 
 #  print(notowania_nbp(2024, 9, 10, ['EUR', 'GBP']))
@@ -420,3 +422,18 @@ def notowania_nbp(rok=2024, miesiac=9, dzien=12, waluty=["EUR", "USD", "CHF"]):
 #     print("Coś w słowniku jest")
 # else:
 #     print("Nie ma nic w słowniku")
+
+# lista_notowan = []
+
+# for m in range(6, 9):
+#     for d in range(1, 32):
+#         notowanie = notowania_nbp(2024, m, d, ["EUR", "USD"])
+#         if notowanie:
+#             lista_notowan.append(notowanie)
+
+
+# print(lista_notowan)
+
+
+from datetime import datetime
+print(datetime.today())
