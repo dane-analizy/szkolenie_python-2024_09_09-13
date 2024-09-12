@@ -95,7 +95,6 @@
 #         print(f"Nieznany błąd: {e}")
 
 
-
 ## funkcje
 
 # print() <- to jest funkcja
@@ -106,5 +105,32 @@
 #     print("Jestem w funkcji 'funkcja'")
 
 # # wywołanie funkcji:
-# funkcja() 
 # funkcja()
+# funkcja()
+
+
+# funkcja z parametrami
+# def funkcja(a):
+#     print(f"Jestem 'funkcja' i podałeś parametr {a=}")
+#     b = a + 1
+#     print(f"Wynik dodania 1 do Twojego parametru to: {b}")
+
+# funkcja(10)
+
+
+# funkcja z 2 parametrami:
+# def dodawanie(a, b):
+#     print(f"Jestem funkcja 'dodawanie' i podałeś parametry {a=}, {b=}")
+#     suma = a + b
+#     print(f"Wynik dodania to: {suma}")
+
+# dodawanie(10, 56)
+
+
+# funkcja zwracająca wartości
+# def dodawanie(a, b):
+#     suma = a + b
+#     return suma
+
+# w = dodawanie(10, 56)
+# print(w)
