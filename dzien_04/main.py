@@ -323,14 +323,58 @@
 # python -m pip install requests
 
 
+# import requests
+
+# response = requests.get("https://api.nbp.pl/dupa")
+# print(response)
+
+# print("response.content")
+# print(response.content)
+
+
+# print("response.status_code")
+# print(response.status_code)
+
+
+
 import requests
 
-response = requests.get("https://api.nbp.pl/dupa")
-print(response)
+# zapytanie get
+# res = requests.get("https://httpbin.org/get?param=1&param_b=alamakota",
+#                    headers={"moj_naglowek": "to jestem ja"})
+# print(res.text)
 
-print("response.content")
-print(response.content)
+# data = res.json()
+# print(data['headers'])
 
 
-print("response.status_code")
-print(response.status_code)
+# zapytanie post - wysłanie JSONa
+# res = requests.post("https://httpbin.org/post",
+#                    json={"moje_pole": "to jestem ja",
+#                          "moje_inne_pole": 123})
+
+# print(res.json())
+
+
+# zapytanie post - wysłanie dany via "data"
+# res = requests.post(
+#     "https://httpbin.org/post",
+#     data="wgwoughwpogvhwpgihwpig",
+# )
+
+# print(res.json())
+
+
+
+# API NBP
+# https://api.nbp.pl/api/exchangerates/tables/A/2024-09-12/?format=json
+
+##### ZADANIE
+
+# Korzystając z API NBP wyświetl notowania EUR, USD, CHF z 2024-09-12
+
+
+# res = requests.get()
+# res.status_code == 200
+# res.json()
+# przeiterować po danych i wyświetlić odpowiednie elementy/klucze
