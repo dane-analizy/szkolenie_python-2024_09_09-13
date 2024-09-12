@@ -378,3 +378,30 @@ import requests
 # res.status_code == 200
 # res.json()
 # przeiterować po danych i wyświetlić odpowiednie elementy/klucze
+
+
+import requests
+
+rok = 2024
+miesiac = 9
+dzien = 12
+waluty = ["EUR", "USD", "CHF"]
+
+url = f"https://api.nbp.pl/api/exchangerates/tables/A/{rok}-{miesiac:02d}-{dzien:02d}/?format=json"
+
+res = requests.get(url)
+if res.status_code != 200:
+    print(f"Błąd pobrania danych dla {rok}-{miesiac:02d}-{dzien:02d}")
+    # return {}
+
+data = res.json()[0]
+
+wynik = {
+"data_notowania": data["effectiveDate"]
+}
+
+for kwotowanie in data['rates']:
+    if kwotowanie['code'] in waluty:
+        wynik[kwotowanie["code"]] = kwotowanie["mid"]
+
+print(wynik)
