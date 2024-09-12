@@ -136,8 +136,16 @@
 # print(w)
 
 
-def dodawanie(a: float, b: float) -> float:
-    suma = a + b
-    return suma
+# def dodawanie(a: float, b: float) -> float:
+#     suma = a + b
+#     print(f"Wynik {a} + {b} = {suma}")
+#     return suma
 
-print(dodawanie(10.0, 52))
+# print("wywołanie funkcji", dodawanie(10.0, 52))
+
+
+### ZADANIE
+
+# Przygotuj funkcję, która wyliczy na podstawie wagi i wzrostu (parametry)
+# BMI z dokładnością do 2 miejsc po przecinku. W przypadku pojawienia się wyjątku - wypisze na konsoli
+# błąd i zwróci wartość -1 
