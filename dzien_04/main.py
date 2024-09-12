@@ -454,3 +454,42 @@
 
 
 # konfiguracja w różnych formatach https://blog.prokulski.science/2021/03/29/pliki-konfiguracyjne-python-r/
+
+
+# from utils.config import load_config
+
+# config = load_config("db_postgres.yaml")
+# print(config)
+
+
+# podłączenie do bazy danych - pakiet SQLAlchemy
+# pip install sqlalchemy
+# pakiety do konkretnych typów baz
+# - postgresql - psycopg2
+# - Oracle - cx_oracle
+# - MSSQL - pymssql
+# - MySQL - mysqldb
+
+# https://docs.sqlalchemy.org/en/20/core/engines.html#backend-specific-urls
+
+
+from utils.config import load_config
+
+
+def generate_connection_string_postgresql(db_config):
+    return f"postgresql+psycopg2://{db_config['db_user']}:{db_config['db_pass']}@{db_config['db_host']}:{db_config['db_port']}/{db_config['db_name']}"
+
+def generate_connection_string_sqlite(db_config):
+    return f"sqlite:///{db_config['db_file']}"
+
+config = load_config("db_postgres.yaml")
+
+if config['db_type'] == "postgresql":
+    conn_string = generate_connection_string_postgresql(config)
+elif config['db_type'] == "sqlite":
+    conn_string = generate_connection_string_sqlite(config)
+else:
+    print("Nie umiem zbudować connection stringa")
+    conn_string = ""
+    
+print(conn_string)
