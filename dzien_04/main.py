@@ -302,8 +302,12 @@
 
 
 # import całego pakietu
-import utils
-import utils.plik
+# import utils
+# import utils.plik
 
-print(utils.plik.STALA_TESTOWA)
-utils.funkcja_w_utils()
+# print(utils.plik.STALA_TESTOWA)
+# utils.funkcja_w_utils()
+
+# from utils.config import load_config
+
+# config = load_config(..)
