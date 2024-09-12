@@ -499,5 +499,5 @@ else:
     conn_string = ""
 
 
-# można użyć coon-stringa
+# można użyć conn-stringa
 print(conn_string)
