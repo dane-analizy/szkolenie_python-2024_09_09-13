@@ -404,3 +404,11 @@ def notowania_nbp(rok=2024, miesiac=9, dzien=12, waluty=["EUR", "USD", "CHF"]):
 
 # Używając funkcji notowania_nbp() pobierz notowania dla EUR i USD z całego czerwca,
 # lipca i sierpnia 2024. Niech wynik będzie listą słowników.
+
+
+# czy słownik jest pusty?
+# d = {"a": 1}
+# if d:
+#     print("Coś w słowniku jest")
+# else:
+#     print("Nie ma nic w słowniku")
