@@ -1,5 +1,7 @@
 from pathlib import Path
 
+STALA_TESTOWA = "Dzień dobry"
+
 
 def wczytaj_linie(nazwa_pliku, enc="utf-8"):
     """Wczytuje listę linii z pliku do listy stringów"""
@@ -37,4 +39,5 @@ def wczytaj(nazwa_pliku, enc="utf-8", sep=";"):
     return lista_podzielona
 
 
-print(wczytaj("dane.csv"))
+if __name__ == "__main__":
+    print(wczytaj("dane.csv"))

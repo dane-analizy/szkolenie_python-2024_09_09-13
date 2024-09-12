@@ -215,3 +215,47 @@
 # Wynikiem działania funkcji (powinna to zwracać) ma być ta lista krotek, a argumentem - nazwa pliku.
 
 # rozwiązanie w pliku plik_1.py
+
+
+# Na podstawie kodu z plik_1.py przygotowano plik.py - moduł
+
+
+# importowanie całego modułu
+# import plik
+
+# zawodnicy = plik.wczytaj("dane.csv")
+# print(zawodnicy)
+# print(plik.STALA_TESTOWA)
+
+
+# # importowanie pojedynczej funkcji
+# from plik import wczytaj
+
+# zawodnicy = wczytaj("dane.csv")
+# print(zawodnicy)
+
+# importowanie wszystkiego z modułu
+# from plik import *
+
+# STALA_TESTOWA = "Dobry wieczór"
+
+# zawodnicy = wczytaj("dane.csv")
+# print(zawodnicy)
+# print(STALA_TESTOWA)
+
+# import matplotlib.pyplot as plt
+
+# plt.axis()
+
+
+# import matplotlib.pyplot
+# matplotlib.pyplot.axis()
+
+# from matplotlib.pyplot import axis
+# axis()
+
+
+### ZADANIE
+
+# Zbuduj moduł obliczenia zawierający funkcję liczącą BMI.
+
