@@ -381,7 +381,12 @@ import requests
 def notowania_nbp(rok=2024, miesiac=9, dzien=12, waluty=["EUR", "USD", "CHF"]):
     url = f"https://api.nbp.pl/api/exchangerates/tables/A/{rok}-{miesiac:02d}-{dzien:02d}/?format=json"
 
-    res = requests.get(url)
+    try:
+        res = requests.get(url)
+    except Exception as e:
+        print(f"Błąd dla {url=}: {e}")
+        return {}
+    
     if res.status_code != 200:
         print(f"Błąd pobrania danych dla {rok}-{miesiac:02d}-{dzien:02d}")
         return {}
