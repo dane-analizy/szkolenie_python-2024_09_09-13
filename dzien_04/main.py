@@ -275,3 +275,35 @@
 # Elementy krotki rozdzielone powinny być separatorem (= argument funkcji, domyślnie ;),
 # plik powinien mieć odpowiednie kodowanie (= argument, domyślnie utf-8)
 # i nazwę (= argument).
+
+# do plik.py dodana została funkcja zapisz()
+
+# test funkcji
+# from plik import zapisz
+
+# lista = [
+#     ("linia 1", 10, "nazwisko A"),
+#     ("linia 2", 20, "nazwisko B"),
+#     ("linia 3", 30, "nazwisko C"),
+# ]
+
+# zapisz(lista, "test_zapisz.csv")
+
+
+# Pakiety = zbiory modułów, czyli katalogi z plikami-modułami + plik __init__.py
+
+# zaimportowanie całego modułu z pakietu
+# from utils import plik
+# plik.wczytaj(...)
+
+# zaimportowanie pojedynczej funkcji z modułu wchodzącego w skład pakietu
+# from utils.obliczenia import bmi
+# bmi(...)
+
+
+# import całego pakietu
+import utils
+import utils.plik
+
+print(utils.plik.STALA_TESTOWA)
+utils.funkcja_w_utils()
