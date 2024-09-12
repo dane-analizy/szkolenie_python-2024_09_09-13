@@ -311,3 +311,26 @@
 # from utils.config import load_config
 
 # config = load_config(..)
+
+
+
+## Usługi sieciowe
+
+# odpytujemy serwisy przez pakiet requests
+# instalujemy:
+# pip install requests
+# py -m pip install requests
+# python -m pip install requests
+
+
+import requests
+
+response = requests.get("https://api.nbp.pl/dupa")
+print(response)
+
+print("response.content")
+print(response.content)
+
+
+print("response.status_code")
+print(response.status_code)
