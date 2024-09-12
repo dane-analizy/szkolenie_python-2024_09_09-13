@@ -134,3 +134,10 @@
 
 # w = dodawanie(10, 56)
 # print(w)
+
+
+def dodawanie(a: float, b: float) -> float:
+    suma = a + b
+    return suma
+
+print(dodawanie(10.0, 52))
