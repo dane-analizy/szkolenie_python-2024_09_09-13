@@ -85,5 +85,11 @@
 # Wczytaj plik i podziel każdy wiersz na elementy w tablicy, rozdzielenie jest przez ";"
 # Wyświetl 4 element z każdej linii. Jeśli napotkasz błąd - obsłuż go.
 
-
-print(linia[3])
+for i, linia in enumerate(open("dane.csv", "r", encoding="utf-8"), start=1):
+    lista_linia = linia.strip().split(";")
+    try:
+        print(lista_linia[3])
+    except IndexError as e:
+        print(f"Nieodpowiednia struktura w linii {i}")
+    except Exception as e:
+        print(f"Nieznany błąd: {e}")
