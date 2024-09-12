@@ -434,6 +434,23 @@
 
 # print(lista_notowan)
 
+# aktualny czas
+# from datetime import datetime
+# print(datetime.now())
 
-from datetime import datetime
-print(datetime.today())
+
+
+# konfiguracja w plikach yaml
+
+# bibliotek pyyaml:
+# pip install pyyaml
+
+# import yaml
+
+# with open("konfiguracja.yaml", "r", encoding="utf-8") as plik:
+#     config = yaml.safe_load(plik)
+    
+# print(config)
+
+
+# konfiguracja w różnych formatach https://blog.prokulski.science/2021/03/29/pliki-konfiguracyjne-python-r/
