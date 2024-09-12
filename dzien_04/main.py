@@ -144,7 +144,6 @@
 # print("wywołanie funkcji", dodawanie(10.0, 52))
 
 
-
 ### ZADANIE
 
 # Przygotuj funkcję, która wyliczy na podstawie wagi i wzrostu (parametry)
@@ -160,11 +159,11 @@
 #     if not isinstance(wzrost, (int, float)):
 #         print("Wzrost musi być typu float lub int")
 #         return -1
-    
+
 #     if (waga < 0) or (wzrost < 0):
 #         print("Wzrost i waga nie mogą być mniejsze od zera")
 #         return -1
-    
+
 #     try:
 #         wynik = round(waga / (wzrost / 100) ** 2, 2)
 #         print("Wynik:", wynik)
@@ -210,7 +209,7 @@
 #         print("Błąd:", e, type(e))
 
 
-
 ## ZADANIE
 
 # Korzystając z poprzednio pisanego kodu - zbuduj funkcję, która wczyta do listy krotek plik csv rozdzielony ";"
+# Wynikiem działania funkcji (powinna to zwracać) ma być ta lista krotek, a argumentem - nazwa pliku.
