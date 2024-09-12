@@ -313,7 +313,6 @@
 # config = load_config(..)
 
 
-
 ## Usługi sieciowe
 
 # odpytujemy serwisy przez pakiet requests
@@ -334,7 +333,6 @@
 
 # print("response.status_code")
 # print(response.status_code)
-
 
 
 import requests
@@ -365,7 +363,6 @@ import requests
 # print(res.json())
 
 
-
 # API NBP
 # https://api.nbp.pl/api/exchangerates/tables/A/2024-09-12/?format=json
 
@@ -379,29 +376,22 @@ import requests
 # res.json()
 # przeiterować po danych i wyświetlić odpowiednie elementy/klucze
 
-
 import requests
 
-rok = 2024
-miesiac = 9
-dzien = 12
-waluty = ["EUR", "USD", "CHF"]
+def notowania_nbp(rok=2024, miesiac=9, dzien=12, waluty=["EUR", "USD", "CHF"]):
+    url = f"https://api.nbp.pl/api/exchangerates/tables/A/{rok}-{miesiac:02d}-{dzien:02d}/?format=json"
 
-url = f"https://api.nbp.pl/api/exchangerates/tables/A/{rok}-{miesiac:02d}-{dzien:02d}/?format=json"
+    res = requests.get(url)
+    if res.status_code != 200:
+        print(f"Błąd pobrania danych dla {rok}-{miesiac:02d}-{dzien:02d}")
+        return {}
 
-res = requests.get(url)
-if res.status_code != 200:
-    print(f"Błąd pobrania danych dla {rok}-{miesiac:02d}-{dzien:02d}")
-    # return {}
+    data = res.json()[0]
 
-data = res.json()[0]
+    wynik = {"data_notowania": data["effectiveDate"]}
 
-wynik = {
-"data_notowania": data["effectiveDate"]
-}
+    for kwotowanie in data["rates"]:
+        if kwotowanie["code"] in waluty:
+            wynik[kwotowanie["code"]] = kwotowanie["mid"]
 
-for kwotowanie in data['rates']:
-    if kwotowanie['code'] in waluty:
-        wynik[kwotowanie["code"]] = kwotowanie["mid"]
-
-print(wynik)
+    return wynik
