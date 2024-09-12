@@ -208,3 +208,9 @@
 #         print(wynik)
 #     except Exception as e:
 #         print("Błąd:", e, type(e))
+
+
+
+## ZADANIE
+
+# Korzystając z poprzednio pisanego kodu - zbuduj funkcję, która wczyta do listy krotek plik csv rozdzielony ";"
