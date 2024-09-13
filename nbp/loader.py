@@ -6,7 +6,9 @@ from utils.db import insert_into_db, connect_db
 
 
 # CONFIG_PATH = "db_postgres.yaml"
-CONFIG_PATH = "db_config_lukasz.yaml"
+# CONFIG_PATH = "db_config_lukasz.yaml"
+CONFIG_PATH = "db_sqlite.yaml"
+
 
 # 1. wczytać konfigurację -> load_config()
 config = load_config(CONFIG_PATH)

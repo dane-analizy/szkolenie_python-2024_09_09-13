@@ -1,0 +1,2 @@
+db_type: sqlite
+db_file: baza_walut.sqlite
