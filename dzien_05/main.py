@@ -135,3 +135,6 @@ nazwa_tabeli = "waluty"
 lista_kolumn = ", ".join(rekord.keys())
 lista_kluczy = ", ".join([f":{k}" for k in rekord.keys()])
 sql_query = f"INSERT INTO {nazwa_tabeli} ({lista_kolumn}) VALUES ({lista_kluczy})"
+
+
+#  kolejne kroki w oddzielnych folderach -> nbp oraz app_flask
