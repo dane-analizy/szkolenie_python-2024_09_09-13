@@ -1,17 +1,14 @@
+import time
+import sqlalchemy as sa
+from sqlalchemy import text
 from utils.config import load_config
+from utils.db import (
+    generate_connection_string_postgresql,
+    generate_connection_string_sqlite,
+)
 
-CONFIG_PATH = "db_postgres.yaml"
-# CONFIG_PATH = "db_config_lukasz.yaml"
-
-
-# funkcje które budują conn-stringi
-def generate_connection_string_postgresql(db_config):
-    return f"postgresql+psycopg2://{db_config['db_user']}:{db_config['db_pass']}@{db_config['db_host']}:{db_config['db_port']}/{db_config['db_name']}"
-
-
-def generate_connection_string_sqlite(db_config):
-    return f"sqlite:///{db_config['db_file']}"
-
+# CONFIG_PATH = "db_postgres.yaml"
+CONFIG_PATH = "db_config_lukasz.yaml"
 
 config = load_config(CONFIG_PATH)
 
@@ -24,6 +21,13 @@ else:
     print("Nie umiem zbudować connection stringa")
     conn_string = ""
 
+# budujemy silnik połączenia do bazy
+db_engine = sa.create_engine(conn_string)
+db_conn = db_engine.connect()
+# print(db_conn)
 
-# można użyć conn-stringa
-print(conn_string)
+result = db_conn.execute(text("SELECT * FROM players;"))
+for r in result:
+    print(r)
+
+db_conn.close()
