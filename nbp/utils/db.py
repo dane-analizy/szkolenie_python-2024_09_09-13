@@ -49,4 +49,3 @@ def insert_into_db(db_conn, nazwa_tabeli, rekord):
     except Exception:
         # print(e)
         print("Błąd - dane do bazy nie trafiły, rekord:", rekord)
-        print("Błąd - dane do bazy nie trafiły, rekord:", rekord)
