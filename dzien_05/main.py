@@ -27,7 +27,12 @@ db_conn = db_engine.connect()
 # print(db_conn)
 
 result = db_conn.execute(text("SELECT * FROM players;"))
+col_names = list(result.keys())
+print(col_names)
+
 for r in result:
     print(r)
+    for el in r:
+        print(el)
 
 db_conn.close()
