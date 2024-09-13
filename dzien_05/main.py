@@ -23,10 +23,11 @@ else:
 
 
 print(conn_string)
+
 # budujemy silnik połączenia do bazy
 db_engine = sa.create_engine(conn_string)
 db_conn = db_engine.connect()
-# print(db_conn)
+print(db_conn)
 
 result = db_conn.execute(text("SELECT * FROM players;"))
 col_names = list(result.keys())
