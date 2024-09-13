@@ -1,4 +1,3 @@
-import time
 import sqlalchemy as sa
 from sqlalchemy import text
 from utils.config import load_config
@@ -33,9 +32,14 @@ result = db_conn.execute(text("SELECT * FROM players;"))
 col_names = list(result.keys())
 print(col_names)
 
+wyniki_db = []
 for r in result:
     print(r)
-    for el in r:
-        print(el)
+    temp_dict = {}
+    for c, el in zip(col_names, r):
+        temp_dict[c] = el
+    wyniki_db.append(temp_dict)
 
 db_conn.close()
+
+print(wyniki_db)
