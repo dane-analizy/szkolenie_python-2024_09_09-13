@@ -15,6 +15,6 @@ CREATE TABLE IF NOT EXISTS waluty (
     kurs FLOAT
 );
 """
-# 4. pobrać notowania z NBP - np. dla całego sierpnia i września -> notowania_nbp()
+# 4. pobrać notowania z NBP - np. EUR, CHF i USD dla całego sierpnia i września -> notowania_nbp()
 # 5. zapisać do bazy notowania -> insert_into_db(), odpowiednio przebuduj słownik z notowaniem
 # 6. rozłączyć się z bazą -> db_conn.close()
