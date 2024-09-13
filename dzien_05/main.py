@@ -28,7 +28,7 @@ db_engine = sa.create_engine(conn_string)
 db_conn = db_engine.connect()
 print(db_conn)
 
-result = db_conn.execute(text("SELECT * FROM players;"))
+result = db_conn.execute(text("SELECT AVG(height) AS sr_wzrost FROM players;"))
 col_names = list(result.keys())
 print(col_names)
 
