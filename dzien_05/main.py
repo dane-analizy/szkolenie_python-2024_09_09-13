@@ -21,6 +21,8 @@ else:
     print("Nie umiem zbudować connection stringa")
     conn_string = ""
 
+
+print(conn_string)
 # budujemy silnik połączenia do bazy
 db_engine = sa.create_engine(conn_string)
 db_conn = db_engine.connect()
