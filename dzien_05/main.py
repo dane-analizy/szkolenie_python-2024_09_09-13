@@ -92,27 +92,30 @@ print("Połączenie do bazy: ", db_conn)
 
 # wiele rekordów na raz
 # dane do włożenia do tabelki:
-rekordy = (
-    [
-        {
-            "imie": "Halina",
-            "nazwisko": "Kowalska-Bąk",
-            "wzrost": 1.65,
-            "waga": 59,
-        },
-        {"imie": "Krystyna", "nazwisko": "Góral", "wzrost": 1.71, "waga": 58},
-        {"imie": "Zosia", "nazwisko": "Iksińska", "wzrost": 1.84, "waga": 65},
-        {"imie": "Zły", "nazwisko": "Rekord", "wzrost": "q1.8q4", "waga": 65},
-    ],
-)
+rekordy = [
+    {
+        "imie": "Halina",
+        "nazwisko": "Kowalska-Bąk",
+        "wzrost": 1.65,
+        "waga": 59,
+    },
+    {"imie": "Krystyna", "nazwisko": "Góral", "wzrost": 1.71, "waga": 58},
+    {"imie": "Zosia", "nazwisko": "Iksińska", "wzrost": 1.84, "waga": 65},
+    {"imie": "Zły", "nazwisko": "Rekord", "wzrost": "q1.8q4", "waga": 65},
+]
+
 sql_query = """
 INSERT INTO players (first_name, last_name, height, weight)
 VALUES (:imie, :nazwisko, :wzrost, :waga);
 """
 
-result = db_conn.execute(text(sql_query), rekordy)
-db_conn.commit()
+try:
+    result = db_conn.execute(text(sql_query), rekordy)
+    db_conn.commit()
+    print(result)
+except Exception as e:
+    print(e)
+    print("Błąd - dane do bazy nie trafiły")
 
-print(result)
 
 db_conn.close()
