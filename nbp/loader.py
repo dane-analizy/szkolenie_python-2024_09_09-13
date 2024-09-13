@@ -1,3 +1,7 @@
+from utils.config import load_config
+from utils.nbp import notowania_nbp
+from utils.db import insert_into_db, connect_db
+
 # CONFIG_PATH = "db_postgres.yaml"
 CONFIG_PATH = "db_config_lukasz.yaml"
 
