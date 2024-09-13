@@ -49,7 +49,7 @@
     <form id="filterForm">
         <select id="waluta" name="waluta">
             {% for w in waluty %}
-            <option value="{{ w }}">{{ w }}</option>
+            <option value="{{ w }}" {% if w==waluta %}selected{% endif %}>{{ w }}</option>
             {% endfor %}
         </select>
         <input type="date" id="dataOd" name="dataOd">

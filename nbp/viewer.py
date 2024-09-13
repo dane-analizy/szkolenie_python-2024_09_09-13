@@ -8,20 +8,10 @@ from utils.db import connect_db
 CONFIG_PATH = "db_sqlite.yaml"
 
 
-# 1. wczytać konfigurację -> load_config()
+# wczytać konfigurację -> load_config()
 config = load_config(CONFIG_PATH)
 
-
 app = Flask(__name__)
-
-
-"""
-waluta -> nazwa waluty do tytułu
-waluty -> lista dostępnych walut
-kwotowania -> lista par data-kurs
-
-kurs/EUR?od=...&do=..
-"""
 
 
 @app.route("/")
@@ -38,52 +28,29 @@ def kurs(waluta):
     from waluty
     where
         waluta='{waluta.upper()}'
-    order by data;"""
+    """
 
+    sql_query_where = ""
     if request.args.get("od"):
-        sql_query = f"""
-    select
-        data,
-        kurs
-    from waluty
-    where
-        waluta='{waluta.upper()}'
-        and data >= '{request.args.get("od")}'
-    order by data;"""
+        sql_query_where = f" and data >= '{request.args.get('od')}' "
 
     if request.args.get("do"):
-        sql_query = f"""
-    select
-        data,
-        kurs
-    from waluty
-    where
-        waluta='{waluta.upper()}'
-        and data <= '{request.args.get("do")}'
-    order by data;"""
+        sql_query_where = f" and data <= '{request.args.get('do')}' "
 
     if request.args.get("od") and request.args.get("do"):
-        sql_query = f"""
-    select
-        data,
-        kurs
-    from waluty
-    where
-        waluta='{waluta.upper()}'
-        and data >= '{request.args.get("od")}'
-        and data <= '{request.args.get("do")}'
-    order by data;"""
+        sql_query_where = f" and data >= '{request.args.get('od')}' and data <= '{request.args.get('do')}' "
+
+    sql_query = sql_query + sql_query_where + " order by data;" ""
 
     # podłączyć się do bazy -> connect_db()
     db_conn = connect_db(config)
 
     # lista dostępnych walut
-    res = db_conn.execute(text("select distinct waluta from waluty;"))
+    res = db_conn.execute(text("select distinct waluta from waluty order by waluta;"))
     waluty = [r[0] for r in res]
 
     # kwotowania wybranej waluty w zakresie od-do
     res = db_conn.execute(text(sql_query))
-
     wyniki = [{"data": r[0], "kurs": r[1]} for r in res]
 
     # zamykamy połącznie z bazą danych
