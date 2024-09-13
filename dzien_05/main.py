@@ -101,7 +101,7 @@ rekordy = [
     },
     {"imie": "Krystyna", "nazwisko": "Góral", "wzrost": 1.71, "waga": 58},
     {"imie": "Zosia", "nazwisko": "Iksińska", "wzrost": 1.84, "waga": 65},
-    {"imie": "Zły", "nazwisko": "Rekord", "wzrost": "q1.8q4", "waga": 65},
+    {"imie": "Zły", "nazwisko": "Rekord", "wzrost": 1.84, "waga": 65},
 ]
 
 sql_query = """
