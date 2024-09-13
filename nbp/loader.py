@@ -34,7 +34,7 @@ r = 2024 # pobieramy tylko rok 2024
 waluty = ["EUR", "CHF", "USD", "GBP"]
 
 # lecimy po miesiącach:
-for m in [8, 9]:
+for m in range(1, 10):
     # lecimy po dniach:
     for d in range(1, 32):
         # pobieramy kwotowanie dla wszystkich wybranych walut dla danego dnia
