@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs {{ waluta }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Kursy walut</h1>
+
+    <form id="filterForm">
+        <select id="waluta" name="waluta">
+            {% for w in waluty %}
+            <option value="{{ w }}">{{ w }}</option>
+            {% endfor %}
+        </select>
+        <input type="date" id="dataOd" name="dataOd">
+        <input type="date" id="dataDo" name="dataDo">
+        <button type="button" onclick="zmienWalute()">Filtruj</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Data kwotowania</th>
+                <th>Kurs {{ waluta }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for kwotowanie in kwotowania %}
+            <tr>
+                <td>{{ kwotowanie.data }}</td>
+                <td>{{ kwotowanie.kurs }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+        function zmienWalute() {
+            var waluta = document.getElementById("waluta").value;
+            var dataOd = document.getElementById("dataOd").value;
+            var dataDo = document.getElementById("dataDo").value;
+
+            var url = "kurs/" + waluta;
+            var params = [];
+
+            if (dataOd) {
+                params.push("od=" + dataOd);
+            }
+            if (dataDo) {
+                params.push("do=" + dataDo);
+            }
+
+            if (params.length > 0) {
+                url += "?" + params.join("&");
+            }
+
+            window.location.href = url;
+        }
+    </script>
+</body>
+
+</html>

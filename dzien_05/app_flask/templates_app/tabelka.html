@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tabelka i zmienne</title>
+</head>
+
+<body>
+
+    <table border="1">
+        <tr>
+            <th>Imie</th>
+            <th>Nazwisko</th>
+        </tr>
+        {% for osoba in osoby %}
+        <tr>
+            <td>
+                {{ osoba.imie }}
+            </td>
+            <td>
+                {{ osoba.nazwisko }}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
