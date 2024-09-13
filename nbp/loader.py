@@ -31,10 +31,10 @@ db_conn.commit()
 
 r = 2024 # pobieramy tylko rok 2024
 # te waluty pobieramy
-waluty = ["EUR", "CHF", "USD", "GBP"]
+waluty = ["CAD", "JPY"]
 
 # lecimy po miesiącach:
-for m in range(1, 10):
+for m in range(6, 10):
     # lecimy po dniach:
     for d in range(1, 32):
         # pobieramy kwotowanie dla wszystkich wybranych walut dla danego dnia
