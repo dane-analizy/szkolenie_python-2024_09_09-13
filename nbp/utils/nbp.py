@@ -6,6 +6,7 @@ import requests
 
 
 def notowania_nbp(rok=2024, miesiac=9, dzien=12, waluty=["EUR", "USD", "CHF"]):
+    """Pobiera z API NBP listę notowań wskazanych walut dla podanej daty"""
     url = f"https://api.nbp.pl/api/exchangerates/tables/A/{rok}-{miesiac:02d}-{dzien:02d}/?format=json"
 
     try:
