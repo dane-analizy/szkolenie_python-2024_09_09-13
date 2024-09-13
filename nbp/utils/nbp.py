@@ -1,6 +1,6 @@
 import random
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import requests
 
@@ -34,9 +34,9 @@ def notowania_nbp(rok=2024, miesiac=9, dzien=12, waluty=["EUR", "USD", "CHF"]):
 
 
 if __name__ == "__main__":
-    # obecna data i czas
-    teraz = datetime.now()
+    # obecna data i czas - minus jeden dzień
+    wczoraj = datetime.now() - timedelta(days=1)
 
-    notowanie = notowania_nbp(teraz.year, teraz.month, teraz.day, ["EUR", "USD"])
+    notowanie = notowania_nbp(wczoraj.year, wczoraj.month, wczoraj.day, ["EUR", "USD"])
     if notowanie:
         print(notowanie)
