@@ -21,20 +21,23 @@ else:
     conn_string = ""
 
 
-print(conn_string)
+print("Connetion string: ", conn_string)
 
 # budujemy silnik połączenia do bazy
 db_engine = sa.create_engine(conn_string)
 db_conn = db_engine.connect()
-print(db_conn)
+print("Połączenie do bazy: ", db_conn)
 
-result = db_conn.execute(text("SELECT AVG(height) AS sr_wzrost FROM players;"))
+sql_query = "SELECT * FROM players;"
+# sql_query = "SELECT AVG(height) AS sr_wzrost FROM players;"
+
+result = db_conn.execute(text(sql_query))
 col_names = list(result.keys())
-print(col_names)
+print("Nazwy kolumn: ", col_names)
 
 wyniki_db = []
 for r in result:
-    print(r)
+    print("Jeden wiersz pobrany z bazy: ", r)
     temp_dict = {}
     for c, el in zip(col_names, r):
         temp_dict[c] = el
@@ -42,4 +45,5 @@ for r in result:
 
 db_conn.close()
 
+print("Lista słowników z wynikami z bazy:")
 print(wyniki_db)
